@@ -17,23 +17,80 @@
         <!-- Texto -->
         <div class="row mt-2">
             <div class="col-lg-3 offset-lg-1 text-center">
-                <img src="img/card1.png" style="max-width: 80%;" alt="">
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-6 mt-4">
-                <p>HISTÓRIA EM QUADRINHOS</p>
-                <h2>Comunicação e cuidado centrado na pessoa</h2>
 
-                <p>Talvez você já tenha vivido uma cena parecida. Agenda cheia, tempo curto, prontuário
-                    aberto… e uma pessoa com dor que precisa ser ouvida.
-                    <br><br>
-                    Essa história em quadrinhos retrata um desafio cotidiano da APS: equilibrar a pressão
-                    do serviço com a necessidade de oferecer um cuidado verdadeiramente centrado na
-                    pessoa. Ao acompanhar a narrativa, observe como pequenas mudanças na postura e
-                    na escuta podem transformar completamente o encontro clínico.
-                </p>
+                <div class="card-aula">
+
+                    <div class="text-left">
+                        <img src="img/rodrigo_pacheco.jpg" style="width: 100%;" alt="">
+                        <p>Estratégias para melhorar a comunicação na APS</p>
+                        <p>Rodrigo Pacheco</p>
+                        <p>Médico de Família e Comunidade</p>
+                        <p>Mestre em Saúde Pública</p>
+                    </div>
+
+                    <button class="btn-play">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-6 mt-4">
+                <p>AUDIOCAST</p>
+                <h2>Estratégias para melhorar a
+                    comunicação com pessoas
+                    com dor crônica</h2>
+
+                <p>Como transformar a comunicação em aliada do cuidado,
+                    mesmo em contextos de alta demanda?</p>
+                <p>Neste audiocast, o médico de família e comunidade, Rodrigo Pacheco, compartilha
+                    reflexões práticas e estratégias possíveis para qualificar o diálogo com pessoas que
+                    vivem com dor crônica e entre os profissionais da equipe. Um convite para reconhecer
+                    desafios comuns e pensar em caminhos viáveis para superá-los.</p>
             </div>
         </div>
 
     </div>
 </div>
+
+<style>
+    .btn-play {
+        padding: 0;
+        filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.28));
+        position: absolute;
+        bottom: 14px;
+        left: 22px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background: #1f5cff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform .25s ease;
+    }
+
+    .btn-play svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .play-circle,
+    .play-icon {
+        transition: all 0.3s ease;
+    }
+
+    .btn-play:hover .play-circle {
+        fill: #ffffff;
+        stroke: #0d47ff;
+        stroke-width: 3;
+    }
+
+    .btn-play:hover .play-icon {
+        fill: #0d47ff;
+    }
+</style>

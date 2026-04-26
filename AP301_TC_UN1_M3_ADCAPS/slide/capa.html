@@ -117,6 +117,45 @@
 
     </div>
 
+
+    <button class="btn-play">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
+            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+        </svg>
+    </button>
+
+    <style>
+        .btn-play {
+            width: 90px;
+            height: 90px;
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+            filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.28));
+        }
+
+        .btn-play svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .play-circle,
+        .play-icon {
+            transition: all 0.3s ease;
+        }
+
+        .btn-play:hover .play-circle {
+            fill: #ffffff;
+            stroke: #0d47ff;
+            stroke-width: 3;
+        }
+
+        .btn-play:hover .play-icon {
+            fill: #0d47ff;
+        }
+    </style>
 </body>
 
 </html>
