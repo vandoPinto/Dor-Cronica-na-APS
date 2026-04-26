@@ -1,0 +1,251 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/08/2020, 09:55:28
+    Author     : Vanderson
+/*
+CorDestaque1= #866607
+CorSecundaria = #316b3e;
+CorTerciaria = #83AD3F;
+
+*/
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* #menuAulas {
+    background-color: #83AD3F !important;
+}
+
+.divImgPrincipalCapa {
+    overflow: hidden;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #316b3e !important;
+    border-color: #316b3e !important;
+} */
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #83AD3F !important;
+    border-color: #83AD3F !important;
+}
+
+.c100>span {
+    color: #866607 !important;
+}
+
+.corSecundaria {
+    color: #8dad4e !important;
+}
+
+.corDestaque2 {
+    color: #316b3e !important;
+
+}
+
+.textoJustificado {
+    text-align: justify;
+}
+
+.paragrafo {
+
+    margin-top: 0;
+    display: block;
+}
+
+.corPrimaria,
+.corDestaque1 {
+    color: #866607 !important;
+}
+
+
+.identificadorAulas {
+    position: relative;
+    top: 0;
+    display: flex;
+    text-align: left;
+    border-radius: 0 0 110px 0px;
+    padding: 7px;
+    padding-right: 85px !important;
+    color: #FFFFFF !important;
+    background-color: #316b3e !important;
+    font-weight: bold !important;
+    overflow: hidden;
+    height: 15vh;
+    align-items: center;
+}
+
+ol {
+    line-height: 2.5;
+}
+
+.identificadorAulas .dados {
+    float: left;
+    margin-left: 10px;
+    font-size: 13px !important;
+
+}
+
+
+.imgPrincipalCapa {
+    border-right: 10px solid #83AD3F;
+    border-radius: 0px 150px 0 0;
+    width: 100%;
+
+}
+
+.capaDireita {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.imgPrincipalCapaDireita {
+    border-left: 10px solid #83AD3F;
+    border-radius: 0px 0px 0px 180px;
+    width: 90%;
+}
+
+.logoPrincipal {
+    width: 400px;
+    margin: auto;
+    display: block;
+}
+
+.borda-direita {
+    border-radius: 0 35px;
+}
+
+.borda-esquerda {
+    border-radius: 35px 0;
+}
+
+.caixas {
+    background-color: #81ae2f;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+}
+
+.saibamais::before {
+    content: "";
+    background-image: url(../img/saibamais.png);
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -45px;
+    background-size: cover;
+    right: -31px;
+
+}
+
+.alerta::before {
+    content: "";
+    background-image: url(../img/alerta.png);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    background-size: cover;
+    right: 40px;
+
+}
+
+.adicao::before {
+    content: "";
+    background-image: url(../img/adicao.png);
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -45px;
+    background-size: cover;
+    right: -31px;
+
+}
+
+.imagem {
+    position: relative;
+}
+
+.imagem .controles {
+    position: absolute;
+    bottom: -27px;
+    right: -5px;
+}
+
+.imagem .controles img {
+    width: 80px;
+}
+
+.img-thumbnail1 {
+
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 90%;
+    height: auto;
+}
+
+.imagem-redonda-borda {
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 73%;
+    margin: auto;
+    border: 7px solid #83AD3F;
+}
+
+.imagem-esquerda {
+    float: left;
+    width: 133px;
+}
+
+.paragrafo-imagem-esquerda {
+    padding-left: 110px;
+}
+
+.row {
+    align-items: center;
+}
+
+.jan {
+    z-index: 30;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline--inner-pin {
+    background-color: transparent;
+}
+
+.current {
+    background-color: orange;
+}
+
+#menuAulas {
+    background-color: rgb(225, 225, 225) !important;
+}
+
+.sidebar a {
+    color: black;
+}
+
+.sidebar a:hover {
+    color: #316b3e;
+}

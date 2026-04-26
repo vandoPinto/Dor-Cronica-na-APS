@@ -1,0 +1,69 @@
+<style>
+    .jan {
+        z-index: 30;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<div class="row">
+
+    <div class="col-sm-7 textoJustificado d-flex align-items-start">
+        <div class="navbar-dark identificadorAulas">
+
+            <div class=dados>
+                Unidade 1 – Tratamento de Feridas no Sistema Único de Saúde - SUS
+                <br>
+                Aula 1 - Aspectos Epidemiológicos, Demográficos e Sociais relacionados às Feridas Agudas e Crônicas no
+                SUS
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<div class="row justify-content-md-center" id="slide2">
+
+    <div class="col-sm-5 textoJustificado">
+        <h5 class="corDestaque2 maiusculo font-weight-bold">
+            5. ASPECTOS EPIDEMIOLÓGICOS,<br> DEMOGRÁFICOS E SOCIAIS RELACIONADOS<br> ÀS FERIDAS NO SUS
+        </h5>
+        <p>
+            <br>
+            <span class="paragrafo">
+                Esses dados apontam que, não somente no Brasil, mas, no mundo todo, vem-se observando, nos últimos anos,
+                a tendência de envelhecimento da população. A idade média de vida da população brasileira tem aumentado.
+                Frente a constatação de que as feridas crônicas acometem mais os idosos, é importante a organização dos
+                serviços de saúde respaldados em políticas públicas, com investimento adequado para atender a essa
+                população.
+            </span>
+        </p>
+
+    </div>
+    <!-- <div class="col-sm-1"></div> -->
+    <div class="col-sm-5 text-center">
+        <div>
+            <img class="img-fluid animate__animated animate__backInRight" src="img/imgslide13.png"
+                style="width: 90%;" />
+            <img class="botao" src="img/lupa.png" class="lupa-img" style="max-width:40px">
+            <a href="https://www.saude.gov.br/sistema-unico-de-saude" target="_blank"><img src="img/saibamais.png"></a>
+        </div>
+    </div>
+    <div class="jan">
+        <img src="img/imgslide13.png" style="height: 100%;" />
+    </div>
+</div>
+
+<script>
+    $(() => {
+        $('.jan').hide().click(() => { $('.jan').fadeOut() });
+        $('.botao').css('cursor', 'pointer').click(() => {
+            $('.jan').css('cursor', 'pointer').fadeIn();
+        })
+    })
+</script>
