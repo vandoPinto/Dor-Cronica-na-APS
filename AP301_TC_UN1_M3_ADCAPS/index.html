@@ -45,103 +45,61 @@ and open the template in the editor.
 
     <!-- rodapé -->
     <div class="timeline">
-        <div class="row align-items-center" style="">
 
-            <!-- Botões -->
-            <div class="col-md-6 text-center text-md-start ">
-                <div class="d-flex justify-content-center justify-content-md-start gap-4 flex-wrap">
 
-                    <div class="text-center">
-                        <small>Início</small><br>
-                        <button class="btn border-0"><img src=" img/icon_home.png" alt=""></button>
-                        <!-- <button class="btn rounded-circle border-0" style="width:55px; height:55px;"">
-                        </button> -->
+        <div class="row align-items-center navigation">
+
+            <div class="footer-box">
+
+                <div class="nav-area">
+
+                    <div class="nav-item">
+                        <div>Início</div>
+                        <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 30L32 12L54 30V52C54 54.2 52.2 56 50 56H14C11.8 56 10 54.2 10 52V30Z"
+                                stroke="#0d47ff" stroke-width="4" stroke-linejoin="round" />
+                            <path d="M26 56V38H38V56" stroke="#0d47ff" stroke-width="4" />
+                        </svg>
                     </div>
 
-                    <div id="btVo" onclick="Navega('volta')" class="text-center">
-                        <small>Voltar</small><br>
-                        <button class="btn rounded-circle border border-primary"
-                            style="width:55px; height:55px; background:#fff; color:#0d47ff;">
-                            ◀
-                        </button>
+                    <div class="nav-item" id="btVo" onclick="Navega('volta')">
+                        <div>Voltar</div>
+                        <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="26" stroke="#0d47ff" stroke-width="4" />
+                            <path d="M37 18L24 32L37 46" stroke="#0d47ff" stroke-width="5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
 
-                    <div id="btAv" onclick="Navega('avanca')" class="text-center">
-                        <small>Avançar</small><br>
-                        <button class="btn rounded-circle border-0"
-                            style="width:55px; height:55px; background:#0d47ff; color:#fff;">
-                            ▶
-                        </button>
+                    <div class="nav-item" id="btAv" onclick="Navega('avanca')">
+                        <div>Avançar</div>
+                        <svg width="52" height="52" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="30" fill="#0d47ff" />
+                            <path d="M27 18L40 32L27 46" stroke="white" stroke-width="5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
 
                 </div>
-            </div>
 
-            <!-- Progresso -->
-            <div id="progresso" class="col-md-6 text-center">
-                <p>Seu progresso <span id="progressoAtual">0</span>/<span id="totalProgresso">0</span></p>
-                <div class="d-inline-block" style="width:260px;">
-                    <div class="progress"
-                        style="height:14px; border:3px solid #0d47ff; border-radius:20px; background:#d9d4c7;">
-                        <div id="progress-bar" style="width:20%; background:#f39200; border-radius:20px;">
-                        </div>
+                <div class="progress-area">
+                    <div class="progress-title">Seu progresso <span id="progressoAtual">0</span>/<span
+                            id="totalProgresso">0</span></div>
+                    <div class="custom-progress">
+                        <div id="progress-bar" class="custom-progress-fill"></div>
                     </div>
                 </div>
+
             </div>
 
         </div>
-        <!-- Barra inferior -->
-        <div class="row g-0">
+
+        <div class="row g-0 mb-0">
             <div class="col-12">
                 <div style="height:20px; background:#f39200;"></div>
             </div>
         </div>
     </div>
-
-
-
-
-
-    <!-- <div id="progresso">
-        <div id=classeProgress class="c100 p25 small">
-            <span id="valorProgresso">25%</span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-            </div>
-        </div>
-    </div> -->
-
-
-    <!-- <section class="timeline">
-        <img src="img/menu.svg" alt="menu" onclick="openNav()" data-toggle="tooltip" data-placement="top"
-            data-original-title="Menu" style="cursor: pointer;">
-        <figure class="timeline--inner"> </figure>
-    </section> -->
-
-
-    <!-- <button class="btn btn-primary" id="btVo" onclick="Navega('volta')" data-toggle="tooltip" data-placement="left"
-        title="Voltar">
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-            <path fill-rule="evenodd"
-                d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z" />
-            <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z" />
-        </svg>
-    </button> -->
-
-
-    <!-- <button class="btn btn-primary hide" id="btAv" onclick="Navega('avanca')" data-toggle="tooltip"
-        data-placement="right" title="Avançar">
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-            <path fill-rule="evenodd"
-                d="M7.646 11.354a.5.5 0 0 1 0-.708L10.293 8 7.646 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z" />
-            <path fill-rule="evenodd" d="M4.5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z" />
-        </svg>
-    </button> -->
 
 
     <button class="btn btn-primary" id="btInicio" onclick="iniciaCurso()">
