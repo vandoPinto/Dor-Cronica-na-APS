@@ -94,16 +94,6 @@ items.push({
 
 
 
-items.push({
-    'titulo': 'FICHA TÉCNICA', 'nome': 'Credito', 'arquivo': 'credito1.html', 'identificador': 'c1'
-});
-items.push({
-    'titulo': '', 'nome': 'Credito', 'arquivo': 'credito2.html', 'identificador': 'c2'
-});
-
-
-
-
 
 //Variáveis para progresso
 var totalitems = items.length;
