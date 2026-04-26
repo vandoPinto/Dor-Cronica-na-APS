@@ -16,7 +16,7 @@ function getSearchParams(k) {
 function inicializaSistema() {
 
 
-    montaMenu();
+    // montaMenu();
 
     atualizaProgresso();
     $('#conteudo').load('slide/capa.html');
