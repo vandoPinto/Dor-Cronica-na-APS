@@ -34,3 +34,18 @@
     width: 48px;
     height: 48px;
 }
+
+.zoom {
+    transition: transform .25s ease;
+    cursor: pointer;
+}
+
+.zoom:hover {
+    transform: scale(1.08);
+}
+
+
+
+.barra_esquerda {
+    border-left: 40px solid #f39200;
+}
