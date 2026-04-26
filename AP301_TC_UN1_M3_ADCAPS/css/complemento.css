@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --timeline-height: 18vh;
+    --timeline-height: 16vh;
     /* ajuste conforme o tamanho real */
 }
 
@@ -136,7 +136,7 @@ h3 {
     }
 
     #conteudo {
-        height: calc(100vh - var(--timeline-height));
+        height: calc(90vh - var(--timeline-height));
         overflow-y: auto;
     }
 
