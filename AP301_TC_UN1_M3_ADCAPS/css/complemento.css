@@ -136,7 +136,7 @@ h3 {
     }
 
     #conteudo {
-        height: calc(90vh - var(--timeline-height));
+        height: calc(100vh - var(--timeline-height));
         overflow-y: auto;
     }
 
