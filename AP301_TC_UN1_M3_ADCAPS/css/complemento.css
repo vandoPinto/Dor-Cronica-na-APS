@@ -75,6 +75,10 @@ h3 {
     color: #000;
     font-size: clamp(0.8rem, 1vw, 1rem);
     font-weight: 500;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .nav-item svg {
@@ -91,6 +95,10 @@ h3 {
     font-size: clamp(0.8rem, 1vw, 1rem);
     color: #000;
     margin-bottom: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .custom-progress {
