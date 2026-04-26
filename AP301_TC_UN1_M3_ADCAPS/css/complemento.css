@@ -126,10 +126,8 @@ h3 {
 #conteudo {
     height: calc(100vh - var(--timeline-height));
     overflow-y: auto;
-    padding: 20px;
     box-sizing: border-box;
 }
-
 
 @media (max-width: 764px) {
 
