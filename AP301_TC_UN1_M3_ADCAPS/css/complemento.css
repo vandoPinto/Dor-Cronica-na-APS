@@ -24,6 +24,10 @@ h3 {
     margin-top: 20px !important;
 }
 
+.logo-m {
+    max-width: 250px !important;
+}
+
 .timeline>div {
     background: #d9d4c7;
     margin: 0 3rem;
@@ -42,8 +46,12 @@ h3 {
         height: 100vh;
     }
 
+    .logo-m {
+        max-width: 150px !important;
+    }
+
     .timeline {
-        position: sticky;
+        position: absolute;
         bottom: 0px;
     }
 

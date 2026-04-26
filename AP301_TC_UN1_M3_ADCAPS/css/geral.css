@@ -30,7 +30,7 @@ Time line (Menu Horizontal)
     left: 0;
 }
 
-.timeline--inner {
+/* .timeline--inner {
     position: absolute;
     display: block;
     top: 50%;
@@ -69,13 +69,13 @@ Time line (Menu Horizontal)
 
 .timeline--inner-pin {
     /* margin-left: 5%; */
-    /* display: block; */
-    float: left;
-    position: relative;
-    margin-left: 4%;
+/* display: block; */
+float: left;
+position: relative;
+margin-left: 4%;
 }
 
-#menuAulas .alteraAula.concluido::before {
+*/ #menuAulas .alteraAula.concluido::before {
     content: " ";
     width: 10px;
     height: 10px;
