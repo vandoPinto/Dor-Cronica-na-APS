@@ -1,42 +1,64 @@
-<div class="container-fluid px-0">
-    <div class="row g-0">
-        <div class="col-12">
-            <div style="height:20px; background:#f39200; width:100%;"></div>
+<div class="container-fluid px-0 d-flex flex-column min-vh-100">
+
+    <!-- TOPO -->
+    <div style="height:20px; background:#f39200;"></div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="container-fluid flex-grow-1 d-flex align-items-center">
+
+        <div class="row w-100 align-items-center g-0 px-3 px-lg-5">
+
+            <!-- ESQUERDA (IMAGEM) -->
+            <div class="col-lg-6 d-flex justify-content-center mb-4 mb-lg-0">
+                <div style="width: 85%;">
+                    <img src="img/logo_principal.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+
+            <!-- DIREITA (TEXTO) -->
+            <div class="col-lg-6 text-center text-lg-start">
+
+                <div class="mb-4">
+                    <img src="img/logo_m.png" style="max-width:150px;" alt="Logo">
+                </div>
+
+                <p class="mb-2 fw-semibold" style="font-size:14px;">
+                    APRESENTAÇÃO - ENTENDENDO O MÓDULO
+                </p>
+
+                <h1 class="fw-bold  mb-2" style="font-size:48px;">
+                    Módulo 3
+                </h1>
+
+                <h2 class="mb-4" style="font-size:42px; line-height:1.2;">
+                    Avaliação da Dor Crônica na APS
+                </h2>
+
+                <button class="btn-hq zoom" onclick="iniciaCurso()">
+                    COMEÇAR
+                </button>
+
+            </div>
+
         </div>
     </div>
-    <div class="row container-fluid" style="position: relative;height: 100vh;display: flex;align-items: center;">
 
-        <div class="col-lg-6 d-flex justify-content-center">
-            <div style="width: 80%;">
-                <img src="img/logo_principal.jpg" style="width: 100%;" alt="">
-            </div>
-        </div>
+    <!-- LOGOS -->
+    <div class="container-fluid py-3 px-4 px-lg-5">
+        <div class="row align-items-center">
 
-        <div class="col-lg-6 mt-4">
-            <div class="mb-4">
-                <img src="img/logo_m.png" class="logo-m" style="max-width:150px !important;" alt="Logo">
+            <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+                <img src="img/logos_esquerda.jpg" style="width: 40%;" class="img-fluid" alt="">
             </div>
 
-            <p>APRESENTAÇÃO - ENTENDENDO O MÓDULO</p>
-            <h1>Módulo 3</h1>
-            <h2>Avaliação da Dor Crônica na APS</h2>
+            <div class="col-lg-6 text-center text-lg-end">
+                <img src="img/logos_direita.jpg" style="width: 60%;" class="img-fluid" alt="">
+            </div>
 
-            <button class="btn-hq mt-4 zoom" onclick="iniciaCurso()">
-                COMEÇAR
-            </button>
-        </div>
-        <div
-            style="position: relative; display: flex;justify-content: space-around;align-items: flex-end;padding: 0px 40px;">
-            <div class="col-lg-6 ">
-                <img src="img/logos_esquerda.jpg" alt="Logos da esquerda" style="width: 40%;">
-            </div>
-            <div class="col-lg-6 d-flex justify-content-end">
-                <img src="img/logos_direita.jpg" alt="Logos da esquerda" class="img-fluid" style="width: 60%;">
-            </div>
-            <!-- <div style="position: fixed;bottom: 0px;height:20px;background:#f39200;width:100%;"></div> -->
         </div>
     </div>
-</div>
-<div class="col-lg-12">
-    <div style="position: fixed;bottom: 0px;height:20px;background:#f39200;width:100%;"></div>
+
+    <!-- RODAPÉ -->
+    <div style="height:20px; background:#f39200;"></div>
+
 </div>

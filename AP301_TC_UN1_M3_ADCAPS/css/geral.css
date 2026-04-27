@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --timeline-height: 18vh;
+    --timeline-height: 90px;
     /* ajuste conforme o tamanho real */
 }
 
@@ -60,7 +60,7 @@ img {
 
 .footer-box {
     margin: 0px auto;
-    padding: 1rem 0px;
+    padding: 10px 0px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -72,7 +72,7 @@ img {
 .nav-area {
     display: flex;
     align-items: flex-start;
-    gap: 38px;
+    gap: 20px;
 }
 
 
@@ -90,12 +90,6 @@ img {
     -ms-user-select: none;
 }
 
-/* .nav-item svg {
-    cursor: pointer;
-    transition: all 0.3s ease;
-} */
-
-
 
 .nav-item {
     user-select: none;
@@ -105,6 +99,7 @@ img {
 }
 
 .nav-item svg {
+    width: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -155,7 +150,7 @@ img {
 .progress-title {
     font-size: clamp(0.8rem, 1vw, 1rem);
     color: #000;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -200,9 +195,7 @@ img {
 
 @media (max-width: 764px) {
 
-    #progresso {
-        display: none !important;
-    }
+
 
     #conteudo {
         height: calc(100vh - var(--timeline-height));
@@ -236,11 +229,15 @@ img {
     }
 
     .nav-item svg {
-        width: 40px;
+        width: 30px;
     }
 
     .progress-area {
         text-align: center;
+    }
+
+    .progress-title {
+        margin-bottom: 5px;
     }
 
     .custom-progress {

@@ -1,5 +1,5 @@
 .card-aula {
-    width: 85%;
+    width: 70%;
     max-width: 100%;
     background: #ffffff;
     border: 2px solid #0d47ff;
@@ -67,4 +67,42 @@
 .btn-hq:hover {
     background: #0837c9;
     transform: translateY(-2px);
+}
+
+.btn-play {
+    padding: 0;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.28));
+    position: absolute;
+    bottom: 14px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #1f5cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform .25s ease;
+}
+
+.btn-play svg {
+    width: 100%;
+    height: 100%;
+}
+
+.play-circle,
+.play-icon {
+    transition: all 0.3s ease;
+}
+
+.btn-play:hover .play-circle {
+    fill: #ffffff;
+    stroke: #0d47ff;
+    stroke-width: 3;
+}
+
+.btn-play:hover .play-icon {
+    fill: #0d47ff;
 }
