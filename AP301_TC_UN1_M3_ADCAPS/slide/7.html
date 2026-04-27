@@ -43,11 +43,16 @@
 
                             <div class="d-flex align-items-center gap-3 mb-2">
                                 <div style="width:21px;">
-                                    <img src="img/icon_download.jpg" class="img-fluid zoom" alt="">
+                                    <a href="arquivos/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf"
+                                        download="TEX 3.1.1 Cartilha Comunicação Empática na APS V6.pdf"
+                                        target="_blank">
+                                        <img src="img/icon_download.jpg" class="img-fluid zoom" alt="">
+                                    </a>
                                 </div>
 
                                 <div style="width:35px;">
-                                    <img src="img/icon_imprimir.jpg" class="img-fluid zoom" alt="">
+                                    <img src="img/icon_imprimir.jpg" class="img-fluid zoom" alt=""
+                                        onclick="imprimir('arquivos/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf')">
                                 </div>
                             </div>
 
@@ -64,7 +69,7 @@
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-6">
+            <div class="col-lg-6  mb-4">
 
                 <!-- TIPO -->
                 <div class="d-flex align-items-center gap-3 mb-3">
@@ -90,11 +95,35 @@
                 </p>
 
                 <!-- BOTÃO -->
-                <button class="btn-hq mt-3 zoom">
-                    ACESSE
-                </button>
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal7">
+                        ACESSE
+                    </button>
+                </div>
 
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="pdfModal7" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <div class="modal-header">
+                <!-- <h5 class="modal-title">Visualização do PDF</h5> -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe src="arquivos/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf" width="100%" height="100%"
+                    style="border:none;">
+                </iframe>
+            </div>
+
         </div>
     </div>
 </div>

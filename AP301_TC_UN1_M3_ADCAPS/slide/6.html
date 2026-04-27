@@ -42,7 +42,7 @@
                         <br>
                     </div>
 
-                    <button class="btn-play">
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal6">
                         <svg viewBox="0 0 64 64">
                             <circle class="play-circle" cx="32" cy="32" r="28" fill="#ffffff" />
                             <path class="play-icon" d="M26 20L44 32L26 44Z" fill="#0d47ff" />
@@ -53,7 +53,7 @@
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-6">
+            <div class="col-lg-6  mb-4">
 
                 <!-- TIPO -->
                 <div class="d-flex align-items-center gap-3 mb-3">
@@ -83,23 +83,63 @@
                 </p>
 
                 <!-- SHARE -->
-                <div class="d-flex align-items-center gap-3 mt-3">
-
+                <div class="d-flex align-items-center gap-3 mt-3 zoom"
+                    onclick="compartilharArquivo('/arquivos/Animacao_311.mp4')">
                     <div style="width: 25px;">
-                        <img src="img/icon_share.jpg" class="img-fluid zoom" alt="">
+                        <img src="img/icon_share.jpg" class="img-fluid" alt="">
                     </div>
-
                     <p class="mb-0" style="color: var(--color-primary);">
                         Compartilhe este material.
                     </p>
                 </div>
 
                 <!-- BOTÃO -->
-                <button class="btn-hq mt-3 zoom">
-                    ASSISTA
-                </button>
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal6">
+                        ASSISTA
+                    </button>
+                </div>
 
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal6" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h5 class="modal-title">Vídeo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body p-0">
+
+                <video id="videoPlayer6" controls style="width:100%; height:auto;">
+                    <source src="arquivos/Animacao_311.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const videoModal6 = document.getElementById('videoModal6');
+
+    videoModal6.addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('videoPlayer6');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+</script>

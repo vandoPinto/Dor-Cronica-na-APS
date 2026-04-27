@@ -46,7 +46,7 @@
                     </div>
 
                     <!-- BOTÃO PLAY -->
-                    <button class="btn-play">
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal8">
                         <svg viewBox="0 0 64 64">
                             <circle class="play-circle" cx="32" cy="32" r="28" fill="#ffffff" />
                             <path class="play-icon" d="M26 20L44 32L26 44Z" fill="#0d47ff" />
@@ -57,7 +57,7 @@
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-4">
 
                 <!-- TIPO -->
                 <div class="d-flex align-items-center gap-3 mb-3">
@@ -86,11 +86,52 @@
                 </p>
 
                 <!-- BOTÃO -->
-                <button class="btn-hq mt-3 zoom">
-                    ASSISTA
-                </button>
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal8">
+                        ASSISTA
+                    </button>
+                </div>
 
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal8" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h5 class="modal-title">Vídeo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body p-0">
+
+                <video id="videoPlayer" controls style="width:100%; height:auto;">
+                    <source src="arquivos/V.3.1.1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const videoModal8 = document.getElementById('videoModal8');
+
+    videoModal8.addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('videoPlayer');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+</script>

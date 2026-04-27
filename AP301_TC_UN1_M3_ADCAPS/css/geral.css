@@ -70,6 +70,10 @@ img {
     max-width: 250px !important;
 }
 
+.logo_principal {
+    width: 75% !important;
+}
+
 /* =========================
    TIMELINE
 ========================= */
@@ -196,6 +200,19 @@ img {
 
     .logo-m {
         max-width: 150px !important;
+    }
+
+    .centro-mobile {
+        text-align: center;
+    }
+
+    .logo_principal {
+        width: 100% !important;
+    }
+
+    .timeline {
+        position: fixed;
+        height: var(--timeline-height);
     }
 
     .timeline {

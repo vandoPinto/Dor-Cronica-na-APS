@@ -177,3 +177,32 @@ $(document).keydown(function (e) {
         return false;
     }
 });
+
+function imprimir(url) {
+    const win = window.open(url, '_blank');
+
+    win.onload = function () {
+        win.focus();
+        win.print();
+    };
+}
+
+async function compartilharArquivo(urlArquivo) {
+    const url = window.location.origin + urlArquivo;
+
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'Material do curso',
+                text: 'Confira este material:',
+                url: url
+            });
+        } catch (err) {
+            console.log('Erro ao compartilhar:', err);
+        }
+    } else {
+        // fallback (copia link)
+        navigator.clipboard.writeText(url);
+        alert('Link copiado para a área de transferência!');
+    }
+}

@@ -23,26 +23,25 @@
             <!-- PASTA -->
             <div class="col-lg-4 offset-lg-1 d-flex justify-content-center mt-5">
 
-                <div class="folder-box">
-
-                    <div class="folder-tab"></div>
-
-                    <div class="folder-content">
-                        <p class="folder-title">
-                            Material<br>Complementar
-                        </p>
-
-                        <p class="folder-subtitle">
-                            Clique para acessar
-                        </p>
+                <a href="arquivos/NICE-2021_Chronic-pain-primary-and-secondary-in-over-16s-assessment-of-all-chronic-pain-and-management-of-chronic-primary-pain.pdf"
+                    target="_blank">
+                    <div class="folder-box">
+                        <div class="folder-tab"></div>
+                        <div class="folder-content">
+                            <p class="folder-title">
+                                Material<br>Complementar
+                            </p>
+                            <p class="folder-subtitle">
+                                Clique para acessar
+                            </p>
+                        </div>
                     </div>
-
-                </div>
+                </a>
 
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-4 mt-5">
+            <div class="col-lg-4 mt-4 mb-4">
 
                 <!-- HEADER (ÍCONE + TEXTO alinhados) -->
                 <div class="d-flex align-items-center gap-3 mb-3">
@@ -61,53 +60,36 @@
                 </p>
 
                 <!-- BOTÃO -->
-                <button class="btn-hq mt-3 zoom">
-                    ACESSE
-                </button>
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal12">
+                        ACESSE
+                    </button>
+                </div>
 
             </div>
         </div>
     </div>
 </div>
 
-<style>
-    .folder-box {
-        position: relative;
-        width: 300px;
-        height: 200px;
-        background: #1f4fff;
-        border-radius: 20px;
-        box-shadow: -8px 8px 12px rgba(0, 0, 0, 0.25);
-        display: flex;
-        align-items: center;
-    }
+<!-- MODAL -->
+<div class="modal fade" id="pdfModal12" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
 
-    /* Aba da pasta */
-    .folder-tab {
-        position: absolute;
-        top: -24px;
-        left: 0px;
-        width: 120px;
-        height: 40px;
-        background: #1f4fff;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-    }
+            <!-- HEADER -->
+            <div class="modal-header">
+                <!-- <h5 class="modal-title">Visualização do PDF</h5> -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
 
-    /* Conteúdo */
-    .folder-content {
-        padding: 30px;
-        color: #fff;
-    }
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe
+                    src="arquivos/NICE-2021_Chronic-pain-primary-and-secondary-in-over-16s-assessment-of-all-chronic-pain-and-management-of-chronic-primary-pain.pdf"
+                    width="100%" height="100%" style="border:none;">
+                </iframe>
+            </div>
 
-    .folder-title {
-        font-size: 1.6rem !important;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-
-    .folder-subtitle {
-        font-size: 0.9rem;
-        opacity: 0.9;
-    }
-</style>
+        </div>
+    </div>
+</div>
