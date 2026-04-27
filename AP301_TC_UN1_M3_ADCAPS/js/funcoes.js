@@ -20,6 +20,7 @@ function inicializaSistema() {
 
     atualizaProgresso();
     $('#conteudo').load('slide/capa.html');
+    $('#conteudo').css('height', '100vh');
     $('.alteraAula').on("click", function () {
         mudaAula(parseInt($(this).attr('ident')));
         return false;
@@ -39,6 +40,9 @@ function inicializaSistema() {
     if (pagina) {
         mudaAula(pagina);
         $('#btInicio').hide();
+
+
+
     }
 
 
@@ -48,6 +52,8 @@ function iniciaCurso() {
     mudaAula(0);
     aulaAtual = 0;
     $('#btInicio').hide();
+    $('#conteudo').css('height', '100vh');
+    $('#conteudo').css('height', 'calc(100vh - var(--timeline-height))');
     $('.navbar ').show();
     $('#progresso').show();
     // $('#conteudo').css('height', '95vh');

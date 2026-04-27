@@ -1,39 +1,113 @@
 <div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
     <div class="row g-0">
         <div class="col-12">
             <div style="height:20px; background:#f39200; width:50%;"></div>
         </div>
     </div>
+
     <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
         <div class="row align-items-start">
             <div class="col-md-8"></div>
             <div class="col-md-3 text-md-end text-center mt-4 mb-4">
-                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;" alt="Logo">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:150px;" alt="Logo">
             </div>
         </div>
 
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center mt-5">
 
+            <!-- PASTA -->
+            <div class="col-lg-4 offset-lg-1 d-flex justify-content-center">
 
-        <!-- Texto -->
-        <div class="row mt-2">
-            <div class="col-lg-3 offset-lg-1 text-center">
-                <img src="img/card1.png" style="max-width: 80%;" alt="">
+                <div class="folder-box">
+
+                    <div class="folder-tab"></div>
+
+                    <div class="folder-content">
+                        <p class="folder-title">
+                            Material<br>Complementar
+                        </p>
+
+                        <p class="folder-subtitle">
+                            Clique para acessar
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="col-lg-1"></div>
-            <div class="col-lg-6 mt-4">
-                <p>HISTÓRIA EM QUADRINHOS</p>
-                <h2>Comunicação e cuidado centrado na pessoa</h2>
 
-                <p>Talvez você já tenha vivido uma cena parecida. Agenda cheia, tempo curto, prontuário
-                    aberto… e uma pessoa com dor que precisa ser ouvida.
-                    <br><br>
-                    Essa história em quadrinhos retrata um desafio cotidiano da APS: equilibrar a pressão
-                    do serviço com a necessidade de oferecer um cuidado verdadeiramente centrado na
-                    pessoa. Ao acompanhar a narrativa, observe como pequenas mudanças na postura e
-                    na escuta podem transformar completamente o encontro clínico.
+            <!-- TEXTO -->
+            <div class="col-lg-4">
+
+                <!-- HEADER (ÍCONE + TEXTO alinhados) -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width:40px;">
+                        <img src="img/icon_material.jpg" class="img-fluid" alt="">
+                    </div>
+                    <h2 class="mb-0 titulo-hq">
+                        Saiba mais
+                    </h2>
+                </div>
+
+                <!-- TEXTO -->
+                <p>
+                    Confira o material complementar selecionado para aprofundar o conhecimento
+                    sobre os temas abordados nesta unidade.
                 </p>
+
+                <!-- BOTÃO -->
+                <button class="btn-hq mt-3 zoom">
+                    ACESSE
+                </button>
+
             </div>
         </div>
-
     </div>
 </div>
+
+<style>
+    .folder-box {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background: #1f4fff;
+        border-radius: 20px;
+        box-shadow: -8px 8px 12px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+    }
+
+    /* Aba da pasta */
+    .folder-tab {
+        position: absolute;
+        top: -24px;
+        left: 0px;
+        width: 120px;
+        height: 40px;
+        background: #1f4fff;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    /* Conteúdo */
+    .folder-content {
+        padding: 30px;
+        color: #fff;
+    }
+
+    .folder-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .folder-subtitle {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+</style>

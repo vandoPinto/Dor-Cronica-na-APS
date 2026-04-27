@@ -1,10 +1,15 @@
 <div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
     <div class="row g-0">
         <div class="col-12">
             <div style="height:20px; background:#f39200; width:50%;"></div>
         </div>
     </div>
+
     <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
         <div class="row align-items-start">
             <div class="col-md-8"></div>
             <div class="col-md-3 text-md-end text-center mt-4 mb-4">
@@ -12,84 +17,87 @@
             </div>
         </div>
 
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
 
-        <!-- Texto -->
-        <div class="row mt-2">
-            <div class="col-lg-3 offset-lg-1 text-center">
+            <!-- CARD -->
+            <div class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0">
 
-                <div class="card-aula">
+                <div class="card-aula"
+                    style="background:#1f5cff;color:#fff;border:none;box-shadow: -8px 8px 16px rgba(0,0,0,0.25);">
 
-                    <div class="text-left">
-                        <img src="img/rodrigo_pacheco.jpg" style="width: 100%;" alt="">
-                        <p>Estratégias para melhorar a comunicação na APS</p>
-                        <p>Rodrigo Pacheco</p>
-                        <p>Médico de Família e Comunidade</p>
-                        <p>Mestre em Saúde Pública</p>
+                    <div style="padding:20px;">
+                        <img src="img/animacao.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="text-start px-3 pb-3">
+                        <p class="fw-bold" style="color: white;">
+                            Técnicas de Comunicação
+                            Empática: fortalecendo a
+                            relação com a pessoa com
+                            dor crônica na Atenção
+                            Primária à Saúde
+                        </p>
                     </div>
 
                     <button class="btn-play">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
-                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                        <svg viewBox="0 0 64 64">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#ffffff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="#0d47ff" />
                         </svg>
                     </button>
+
                 </div>
             </div>
-            <!-- <div class="col-lg-1"></div> -->
-            <div class="col-lg-6 mt-4">
-                <p>AUDIOCAST</p>
-                <h2>Estratégias para melhorar a
-                    comunicação com pessoas
-                    com dor crônica</h2>
 
-                <p>Como transformar a comunicação em aliada do cuidado,
-                    mesmo em contextos de alta demanda?</p>
-                <p>Neste audiocast, o médico de família e comunidade, Rodrigo Pacheco, compartilha
-                    reflexões práticas e estratégias possíveis para qualificar o diálogo com pessoas que
-                    vivem com dor crônica e entre os profissionais da equipe. Um convite para reconhecer
-                    desafios comuns e pensar em caminhos viáveis para superá-los.</p>
+            <!-- TEXTO -->
+            <div class="col-lg-6">
+
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icon_animacao.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">ANIMAÇÃO</p>
+                </div>
+
+                <!-- TÍTULO -->
+                <h2 class="titulo-hq mb-3">
+                    Por que a comunicação empática é tão importante?
+                </h2>
+
+                <!-- TEXTO -->
+                <p>
+                    Antes de qualquer técnica ou protocolo, existe o encontro entre duas pessoas.
+                    Essa animação convida você a refletir sobre o papel da comunicação empática na
+                    Atenção Primária à Saúde e sobre como isso pode fortalecer ou fragilizar a relação
+                    com quem vive com dor crônica.
+                </p>
+
+                <p>
+                    A proposta é olhar para a comunicação como parte do cuidado: algo que constrói
+                    confiança, amplia a compreensão das necessidades individuais e sustenta uma
+                    parceria real entre profissional e usuário.
+                </p>
+
+                <!-- SHARE -->
+                <div class="d-flex align-items-center gap-3 mt-3">
+
+                    <div style="width: 25px;">
+                        <img src="img/icon_share.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <p class="mb-0">
+                        Compartilhe este material.
+                    </p>
+                </div>
+
+                <!-- BOTÃO -->
+                <button class="btn-hq mt-3 zoom">
+                    ASSISTA
+                </button>
+
             </div>
         </div>
-
     </div>
 </div>
-
-<style>
-    .btn-play {
-        padding: 0;
-        filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.28));
-        position: absolute;
-        bottom: 14px;
-        left: 22px;
-        width: 50px;
-        height: 50px;
-        border: none;
-        border-radius: 50%;
-        background: #1f5cff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: transform .25s ease;
-    }
-
-    .btn-play svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    .play-circle,
-    .play-icon {
-        transition: all 0.3s ease;
-    }
-
-    .btn-play:hover .play-circle {
-        fill: #ffffff;
-        stroke: #0d47ff;
-        stroke-width: 3;
-    }
-
-    .btn-play:hover .play-icon {
-        fill: #0d47ff;
-    }
-</style>

@@ -1,14 +1,20 @@
+/* =========================
+   CARD
+========================= */
 .card-aula {
     width: 70%;
     max-width: 100%;
-    background: #ffffff;
-    border: 2px solid #0d47ff;
+    background: var(--color-bg);
+    border: 2px solid var(--color-primary);
     border-radius: 32px;
     padding: 30px;
     position: relative;
-    box-shadow: -8px 8px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: -8px 8px 12px var(--shadow-default);
 }
 
+/* =========================
+   BOTÃO ZOOM
+========================= */
 .zoom-btn {
     position: absolute;
     bottom: 14px;
@@ -17,8 +23,8 @@
     height: 50px;
     border: none;
     border-radius: 50%;
-    background: #1f5cff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    background: var(--color-primary);
+    box-shadow: 0 8px 16px var(--shadow-default);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +41,9 @@
     height: 48px;
 }
 
+/* =========================
+   ZOOM GENÉRICO
+========================= */
 .zoom {
     transition: transform .25s ease;
     cursor: pointer;
@@ -44,34 +53,38 @@
     transform: scale(1.08);
 }
 
-
-
+/* =========================
+   BARRA ESQUERDA
+========================= */
 .barra_esquerda {
-    border-left: 40px solid #f39200;
+    border-left: 40px solid var(--color-accent);
 }
 
+/* =========================
+   BOTÃO HQ
+========================= */
 .btn-hq {
-    background: #0d47ff;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-bg);
     border: none;
     border-radius: 40px;
     padding: 8px 30px;
     font-size: 15px;
-    /* font-weight: 700; */
-    /* letter-spacing: 0.5px; */
     cursor: pointer;
     transition: all 0.3s ease;
-    /* box-shadow: -4px 6px 12px rgba(0, 0, 0, 0.2); */
 }
 
 .btn-hq:hover {
-    background: #0837c9;
+    background: var(--color-primary);
     transform: translateY(-2px);
 }
 
+/* =========================
+   BOTÃO PLAY
+========================= */
 .btn-play {
     padding: 0;
-    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.28));
+    filter: drop-shadow(8px 8px 10px var(--shadow-default));
     position: absolute;
     bottom: 14px;
     left: 22px;
@@ -79,7 +92,7 @@
     height: 50px;
     border: none;
     border-radius: 50%;
-    background: #1f5cff;
+    background: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,11 +111,11 @@
 }
 
 .btn-play:hover .play-circle {
-    fill: #ffffff;
-    stroke: #0d47ff;
+    fill: var(--color-bg);
+    stroke: var(--color-primary);
     stroke-width: 3;
 }
 
 .btn-play:hover .play-icon {
-    fill: #0d47ff;
+    fill: var(--color-primary);
 }
