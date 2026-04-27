@@ -88,10 +88,6 @@ items.push({
 items.push({
     'titulo': 'REFERÊNCIAS', 'nome': 'Aula 15', 'arquivo': '15.html', 'identificador': '14'
 });
-items.push({
-    'titulo': '', 'nome': 'Aula 16', 'arquivo': '16.html', 'identificador': '15'
-});
-
 
 
 

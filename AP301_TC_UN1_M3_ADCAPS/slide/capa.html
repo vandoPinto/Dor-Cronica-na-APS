@@ -3,44 +3,46 @@
     <!-- TOPO -->
     <div style="height:20px; background:#f39200;"></div>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="container-fluid flex-grow-1 d-flex align-items-center">
+    <!-- ÁREA CENTRAL -->
+    <div class="container-fluid flex-grow-1 d-flex align-items-center justify-content-center">
 
-        <div class="row w-100 align-items-center g-0 px-3 px-lg-5">
+        <div class="row w-100 g-0 mx-3 mx-lg-5 position-relative"
+            style="background:#ffffff; border-right:3px solid #f39200; border-bottom:3px solid #f39200;">
 
-            <!-- ESQUERDA (IMAGEM) -->
-            <div class="col-lg-6 d-flex justify-content-center mb-4 mb-lg-0">
-                <div style="width: 85%;">
-                    <img src="img/logo_principal.jpg" class="img-fluid" alt="">
-                </div>
+            <!-- ESQUERDA (IMAGEM SEM FUNDO) -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-left">
+                <img src="img/logo_principal.jpg" class="img-fluid" style="max-width:75% !important;" alt="">
             </div>
 
-            <!-- DIREITA (TEXTO) -->
-            <div class="col-lg-6 text-center text-lg-start">
+            <!-- DIREITA (CONTEÚDO) -->
+            <div class="col-lg-6 d-flex flex-column justify-content-center px-4 px-lg-5 py-4">
 
-                <div class="mb-4">
-                    <img src="img/logo_m.png" style="max-width:150px !important;" alt="Logo">
+                <div class="mb-4 text-center text-lg-start">
+                    <img src="img/logo_m.png" style="max-width:250px !important;" alt="Logo">
                 </div>
 
-                <p class="mb-2 fw-semibold" style="font-size:14px;">
+                <p class="mb-2 fw-semibold" style="font-size:14px; color:#333;">
                     APRESENTAÇÃO - ENTENDENDO O MÓDULO
                 </p>
 
-                <h1 class="fw-bold  mb-2" style="font-size:48px;">
+                <h1 class="fw-bold mb-2" style="font-size:56px; color:#0d47ff;">
                     Módulo 3
                 </h1>
 
-                <h2 class="mb-4" style="font-size:42px; line-height:1.2;">
-                    Avaliação da Dor Crônica na APS
+                <h2 class="mb-4" style="font-size:44px; line-height:1.2; color:#0d47ff;">
+                    Avaliação da Dor <br> Crônica na APS
                 </h2>
 
-                <button class="btn-hq zoom" onclick="iniciaCurso()">
-                    COMEÇAR
-                </button>
+                <div>
+                    <button class="btn-hq zoom" onclick="iniciaCurso()">
+                        COMEÇAR
+                    </button>
+                </div>
 
             </div>
 
         </div>
+
     </div>
 
     <!-- LOGOS -->
