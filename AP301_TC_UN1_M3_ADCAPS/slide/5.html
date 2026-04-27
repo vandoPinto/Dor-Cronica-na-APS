@@ -81,7 +81,7 @@
                 </p>
 
                 <div class="d-flex align-items-center gap-3 mt-3 zoom"
-                    onclick="compartilharArquivo('/arquivos/AU.3.1.1.mp4')">
+                    onclick="compartilharArquivo('/arquivos/video/AU_3_1_1.mp4')">
                     <div style="width: 25px;">
                         <img src="img/icon_share.jpg" class="img-fluid" alt="">
                     </div>
@@ -103,20 +103,16 @@
 
 <!-- MODAL -->
 <div class="modal fade" id="videoModal" tabindex="-1">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 2rem;"></button>
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
-
-            <!-- HEADER -->
-            <div class="modal-header">
-                <!-- <h5 class="modal-title">Vídeo</h5> -->
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
 
             <!-- BODY -->
             <div class="modal-body p-0">
 
                 <video id="videoPlayer" controls style="width:100%; height:auto;">
-                    <source src="arquivos/AU.3.1.1.mp4" type="video/mp4">
+                    <source src="arquivos/video/AU_3_1_1.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo.
                 </video>
 
