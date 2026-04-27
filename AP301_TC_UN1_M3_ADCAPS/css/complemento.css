@@ -49,3 +49,22 @@
 .barra_esquerda {
     border-left: 40px solid #f39200;
 }
+
+.btn-hq {
+    background: #0d47ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 30px;
+    font-size: 15px;
+    /* font-weight: 700; */
+    /* letter-spacing: 0.5px; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* box-shadow: -4px 6px 12px rgba(0, 0, 0, 0.2); */
+}
+
+.btn-hq:hover {
+    background: #0837c9;
+    transform: translateY(-2px);
+}

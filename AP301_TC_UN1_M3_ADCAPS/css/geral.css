@@ -194,7 +194,7 @@ img {
 
 #conteudo {
     height: calc(100vh - var(--timeline-height));
-    overflow-y: auto;
+    /* overflow-y: auto; */
     box-sizing: border-box;
 }
 
