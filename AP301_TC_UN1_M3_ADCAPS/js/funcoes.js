@@ -154,6 +154,35 @@ function Navega(opcao) {
 
 }
 
+// =========================
+// SWIPE MOBILE
+// =========================
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+document.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+    const distanciaMinima = 50;
+
+    // Swipe para esquerda = avança
+    if (touchStartX - touchEndX > distanciaMinima) {
+        Navega('avanca');
+    }
+
+    // Swipe para direita = volta
+    if (touchEndX - touchStartX > distanciaMinima) {
+        Navega('volta');
+    }
+}
+
 //Menu lateral esquerdo
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
