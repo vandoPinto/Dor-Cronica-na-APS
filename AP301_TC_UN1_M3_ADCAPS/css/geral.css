@@ -462,3 +462,64 @@ img {
     }
 
 }
+
+
+.fullscreen-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.fullscreen-btn i {
+    color: var(--yellow-2);
+    font-size: 2rem;
+}
+
+.fullscreen-show {
+    display: none;
+}
+
+.fullscreen-hide {
+    display: block;
+}
+
+:fullscreen::backdrop {
+    background-color: #ccc;
+}
+
+/* fullscreen
+  * as regras a seguir estão separados para evitar um problema no Firefox,
+  * que não encontra os objetos caso exista mais de 1 seletor com a 
+  * pseudo-classe :fullscreen
+  */
+:-webkit-full-screen .fullscreen-show {
+    display: block;
+}
+
+:-moz-full-screen .fullscreen-show {
+    display: block;
+}
+
+:-ms-fullscreen .fullscreen-show {
+    display: block;
+}
+
+:fullscreen .fullscreen-show {
+    display: block;
+}
+
+:-webkit-full-screen .fullscreen-hide {
+    display: none;
+}
+
+:-moz-full-screen .fullscreen-hide {
+    display: none;
+}
+
+:-ms-fullscreen .fullscreen-hide {
+    display: none;
+}
+
+:fullscreen .fullscreen-hide {
+    display: none;
+}
