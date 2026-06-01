@@ -85,9 +85,6 @@ items.push({
 items.push({
     'titulo': '', 'nome': 'Aula 14', 'arquivo': '14.html', 'identificador': '13'
 });
-items.push({
-    'titulo': 'REFERÊNCIAS', 'nome': 'Aula 15', 'arquivo': '15.html', 'identificador': '14'
-});
 
 
 
