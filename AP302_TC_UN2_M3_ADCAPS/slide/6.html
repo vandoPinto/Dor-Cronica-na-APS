@@ -1,0 +1,131 @@
+<div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
+    <div class="row g-0">
+        <div class="col-12">
+            <div style="height:20px; background:#f39200; width:50%;"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
+        <div class="row align-items-start">
+            <div class="col-md-8"></div>
+            <div class="col-md-3 text-md-end text-center mt-4 mb-4">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;"
+                    alt="Logo de Manejo da dor crônica na aps">
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
+
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula">
+
+                    <div style="border: 2px solid #0d47ff;">
+                        <img src="img/dimensoesdador.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <!-- BOTÃO ZOOM -->
+                    <button class="zoom-btn" data-bs-toggle="modal" data-bs-target="#pdfModal6">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="27" cy="27" r="16" stroke="white" stroke-width="4" />
+                            <line x1="39" y1="39" x2="53" y2="53" stroke="white" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="27" y1="20" x2="27" y2="34" stroke="white" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="20" y1="27" x2="34" y2="27" stroke="white" stroke-width="4"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- TEXTO -->
+            <div class="col-lg-6 mb-4">
+
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icon_infografico.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">INFOGRÁFICO</p>
+                </div>
+
+                <!-- TÍTULO -->
+                <h2 class="titulo-hq mb-3">
+                    Explorando as dimensões da dor
+                </h2>
+
+                <!-- TEXTO -->
+                <p>
+                    Este infográfico ajuda a visualizar, de forma integrada, as dimensões da dor crônica:
+                    somática, cognitiva, emocional, comportamental e social.
+
+                </p>
+
+                <p>
+                    Ao percorrer o material, você verá exemplos de perguntas e intervenções possíveis
+                    para cada dimensão, visando a uma avaliação mais completa e coerente, com base
+                    na abordagem biopsicossocial. É um recurso para ampliar o olhar, organizar a escuta
+                    e qualificar decisões clínicas no cotidiano da APS. Explore o infográfico e reflita: quais
+                    dessas dimensões você costuma abordar com mais facilidade?
+                </p>
+
+                <!-- DOWNLOAD -->
+                <div class="d-flex align-items-center gap-3 ">
+
+                    <div class="zoom" style="width: 22px;">
+                        <a href="arquivos/pdf/Recurso_extra_INF_AN_3.2.2_Explorando_as_dimensoes_da_dor_V5.pdf"
+                            download="Recurso_extra_INF_AN_3.2.2_Explorando_as_dimensoes_da_dor_V5.pdf" target="_blank">
+                            <img src="img/icon_download.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+
+                    <div class="zoom" style="width: 35px;">
+                        <img src="img/icon_imprimir.jpg" class="img-fluid" alt=""
+                            onclick="imprimir('arquivos/pdf/Recurso_extra_INF_AN_3.2.2_Explorando_as_dimensoes_da_dor_V5.pdf')">
+                    </div>
+
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Material disponível para<br>
+                        download e impressão
+                    </p>
+                </div>
+
+                <!-- BOTÃO -->
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal6">
+                        ACESSE
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="pdfModal6" tabindex="-1">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 2rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe src="arquivos/pdf/Recurso_extra_INF_AN_3.2.2_Explorando_as_dimensoes_da_dor_V5.pdf" width="100%"
+                    height="100%" style="border:none;">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</div>

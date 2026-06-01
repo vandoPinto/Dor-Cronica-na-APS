@@ -1,0 +1,135 @@
+<div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
+    <div class="row g-0">
+        <div class="col-12">
+            <div style="height:20px; background:#f39200; width:50%;"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
+        <div class="row align-items-start">
+            <div class="col-md-8"></div>
+            <div class="col-md-3 text-md-end text-center mt-4 mb-4">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;"
+                    alt="Logo de Manejo da dor crônica na aps">
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
+
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula">
+
+                    <div style="border: 2px solid #0d47ff;">
+                        <img src="img/exameFisico.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <a href="arquivos/pdf/tex3-2-2-avaliacao-da-dor-cronica-na-atencao-primaria-a-saude-um-guia-pratico-para-profissionais-de-todo-o-brasil-v4.pdf"
+                        target="_blank">
+                        <button class="zoom-btn">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="27" cy="27" r="16" stroke="white" stroke-width="4" />
+                                <line x1="39" y1="39" x2="53" y2="53" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="27" y1="20" x2="27" y2="34" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="20" y1="27" x2="34" y2="27" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- TEXTO -->
+            <div class="col-lg-6  mb-4">
+
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icon_cartilha.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">CARTILHA</p>
+                </div>
+
+                <!-- TÍTULO -->
+                <h2 class="titulo-hq mb-3">
+                    Avaliação da dor crônica na Atenção Primária à Saúde: um guia prático para profissionais de todo o
+                    Brasil
+                </h2>
+
+                <!-- TEXTO -->
+                <p>
+                    Com o objetivo de transformar conceitos em ações possíveis, sem perder de vista a
+                    singularidade de cada pessoa, este guia reúne ferramentas práticas que apoiam o dia a
+                    dia do atendimento, ajudando a estruturar a anamnese, qualificar a escuta e orientar
+                    decisões clínicas de forma segura e baseada em evidências.
+
+                </p>
+                <p>
+                    Ao longo do material, você encontrará instrumentos como a qualificação da dor, escalas ..
+                </p>
+
+                <!-- LEIA MAIS -->
+                <div class="centro-mobile">
+                    <a href="" style="color: var(--color-primary);">Leia mais</a>
+                </div>
+                <div class="d-flex align-items-center gap-3 ">
+
+                    <div class="zoom" style="width: 22px;">
+                        <a href="arquivos/pdf/tex3-2-2-avaliacao-da-dor-cronica-na-atencao-primaria-a-saude-um-guia-pratico-para-profissionais-de-todo-o-brasil-v4.pdf"
+                            download="TEX 3.2.2_Avaliação da Dor Crônica na Atenção Primária à Saúde.pdf"
+                            target="_blank">
+                            <img src="img/icon_download.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+
+                    <div class="zoom" style="width: 35px;">
+                        <img src="img/icon_imprimir.jpg" class="img-fluid" alt=""
+                            onclick="imprimir('arquivos/pdf/tex3-2-2-avaliacao-da-dor-cronica-na-atencao-primaria-a-saude-um-guia-pratico-para-profissionais-de-todo-o-brasil-v4.pdf')">
+                    </div>
+
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Material disponível para<br>
+                        download e impressão
+                    </p>
+                </div>
+
+                <!-- BOTÃO -->
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal8">
+                        ACESSE
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="pdfModal8" tabindex="-1">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 2rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe
+                    src="arquivos/pdf/tex3-2-2-avaliacao-da-dor-cronica-na-atencao-primaria-a-saude-um-guia-pratico-para-profissionais-de-todo-o-brasil-v4.pdf"
+                    width="100%" height="100%" style="border:none;">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</div>

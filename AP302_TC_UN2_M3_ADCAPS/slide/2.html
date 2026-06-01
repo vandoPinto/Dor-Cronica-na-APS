@@ -1,0 +1,162 @@
+<div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
+    <div class="row g-0">
+        <div class="col-12">
+            <div style="height:20px; background:#f39200; width:50%;"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
+        <div class="row align-items-start">
+            <div class="col-md-8"></div>
+            <div class="col-md-3 text-md-end text-center mt-4 mb-4">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;"
+                    alt="Logo de Manejo da dor crônica na aps">
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
+
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula" style="color: var(--color-primary);">
+
+                    <div class="px-3 pt-4 text-start">
+
+                        <!-- TÍTULO CARD -->
+                        <p class="fw-bold mb-3" style="font-size:1.2rem;">
+                            Importância de uma abordagem centrada na pessoa
+                        </p>
+
+                        <!-- IMAGEM -->
+                        <div class="mb-3">
+                            <img src="img/anamariaFabianna.jpg" class="img-fluid" alt="">
+                        </div>
+
+                        <!-- AUTOR -->
+                        <div class="d-flex gap-4">
+                            <p class="mb-0 small" style="font-size: .6rem !important;">
+                                <strong>Anamaria Siriani</strong><br>
+                                Fisioterapeuta
+                                professora da Faculdade
+                                de Medicina da USP
+                                Ribeirão Preto
+                            </p>
+                            <p class="mb-0 small" style="font-size: .6rem !important;">
+                                <strong>Fabianna Moraleida</strong><br>
+                                Fisioterapeuta e
+                                professora da
+                                Universidade Federal
+                                do Ceará.
+                            </p>
+                        </div>
+                        <br><br>
+                    </div>
+
+                    <!-- BOTÃO PLAY -->
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- TEXTO -->
+            <div class="col-lg-6 mb-4">
+
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icon_video.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">VIDEO</p>
+                </div>
+
+                <!-- TÍTULO (SEM underline e SEM highlight) -->
+                <h2 class="titulo-hq mb-3">
+                    Importância de uma abordagem centrada na pessoa
+                </h2>
+
+                <!-- TEXTO -->
+                <p>
+                    Por onde começar quando se avalia alguém com dor crônica? Pelo sintoma? Pelo diagnóstico?
+                    Ou pela pessoa que vive essa experiência todos os dias?
+
+                </p>
+
+                <p>
+                    Para iniciar esta unidade, vamos conhecer um pouco mais sobre o conceito de abordagem
+                    centrada na pessoa e o que isso significa, na prática, para a avaliação da pessoa com dor
+                    crônica. Essa perspectiva propõe deslocar o foco exclusivo da doença para reconhecer a
+                    pessoa como participante ativa do cuidado, com história, valores, escolhas e projetos de vida.
+                    Neste vídeo, a fisioterapeuta e professora Anamaria Siriani, da USP Ribeirão Preto, e a
+                    fisioterapeuta e professora da Universidade Federal do Ceará, Fabianna Moraleida, refletem
+                    sobre como a avaliação centrada na pessoa amplia o cuidado, indo além do controle dos
+                    sintomas e buscando apoiar a retomada de uma vida com mais significado
+                </p>
+                <!-- COMPARTILHAR -->
+                <div class="d-flex align-items-center gap-3 mt-3 zoom"
+                    onclick="compartilharLink('www.youtube.com/watch?v=htTf0Duu_1U','Importância de uma Abordagem Centrada no Paciente - Manejo da Dor Crônica')"
+                    data-uw-rm-kbnav="click">
+                    <div style="width: 25px;">
+                        <img src="img/icon_share.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Compartilhe este material.
+                    </p>
+                </div>
+                <!-- BOTÃO -->
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                        ASSISTA
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal2" tabindex="-1">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 2rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/htTf0Duu_1U"
+                    title="Importância de uma Abordagem Centrada no Paciente - Manejo da Dor Crônica - (V.3.2.2)"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const videoModal2 = document.getElementById('videoModal2');
+
+    videoModal2.addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('videoPlayer');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+</script>
