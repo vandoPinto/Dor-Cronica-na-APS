@@ -20,13 +20,17 @@ function inicializaSistema() {
 
     atualizaProgresso();
     $('#conteudo').load('slide/capa.html');
+    $('#modal-retorno').hide();
+
+    setTimeout(() => {
+        verificarRetorno();
+    }, 500);
+
     $('#conteudo').css('height', '100vh');
     $('.alteraAula').on("click", function () {
         mudaAula(parseInt($(this).attr('ident')));
         return false;
     });
-
-
 
     $('#btVo').hide();
     $('#btAv').hide();
@@ -40,12 +44,7 @@ function inicializaSistema() {
     if (pagina) {
         mudaAula(pagina);
         $('#btInicio').hide();
-
-
-
     }
-
-
 }
 
 function iniciaCurso() {
@@ -98,6 +97,12 @@ function mudaAula(aula) {
         conclusao.push(aula)
     }
     aulaAtual = aula;
+    const paginaID = window.location.pathname;
+
+    localStorage.setItem(
+        "ultimaAula_" + paginaID,
+        aula
+    );
 
     atualizaProgresso();
     $('#conteudo').load('slide/' + items[aula].arquivo + '?v3', function () { $('#dadosAula').html(nomeUnidade + "<br>" + nomeAula + "<b class='desenv'><br>Arq:" + items[aula].arquivo + "</b>"); });
@@ -234,4 +239,133 @@ async function compartilharArquivo(urlArquivo) {
         navigator.clipboard.writeText(url);
         alert('Link copiado para a área de transferência!');
     }
+}
+
+function verificarRetorno() {
+
+    const paginaID = window.location.pathname;
+
+    const chaveAula = "ultimaAula_" + paginaID;
+    const chaveNaoMostrar = "naoMostrarRetorno_" + paginaID;
+
+    const DIAS_OCULTAR = 10;
+    const MILIS_DIA = 1000 * 60 * 60 * 24;
+
+    const ultimaAula = localStorage.getItem(chaveAula);
+
+    if (!ultimaAula || parseInt(ultimaAula) <= 0) {
+        return;
+    }
+
+    const dataOcultar = localStorage.getItem(chaveNaoMostrar);
+
+    let podeMostrarModal = true;
+
+    if (dataOcultar) {
+
+        const diasPassados =
+            (Date.now() - parseInt(dataOcultar)) / MILIS_DIA;
+
+        if (diasPassados < DIAS_OCULTAR) {
+
+            podeMostrarModal = false;
+
+        } else {
+
+            localStorage.removeItem(chaveNaoMostrar);
+
+        }
+
+    }
+
+    // Não mostrar modal e continuar automaticamente
+    if (!podeMostrarModal) {
+
+        // iniciaCurso();
+
+        // localStorage.removeItem(chaveAula);
+
+        return;
+    }
+
+    setTimeout(function () {
+
+        $("#modal-retorno")
+            .fadeIn(300)
+            .css("display", "flex");
+
+    }, 800);
+
+    // =========================
+    // BOTÃO SIM
+    // =========================
+    $("#btn-retorno-sim")
+        .off("click")
+        .on("click", function () {
+
+            if ($("#nao-mostrar-novamente").is(":checked")) {
+
+                localStorage.setItem(
+                    chaveNaoMostrar,
+                    Date.now().toString()
+                );
+
+            }
+
+            $("#modal-retorno").fadeOut(300);
+
+            iniciaCurso();
+
+            setTimeout(function () {
+                mudaAula(parseInt(ultimaAula));
+            }, 100);
+
+        });
+
+    // =========================
+    // BOTÃO NÃO
+    // =========================
+    $("#btn-retorno-nao")
+        .off("click")
+        .on("click", function () {
+
+            if ($("#nao-mostrar-novamente").is(":checked")) {
+
+                localStorage.setItem(
+                    chaveNaoMostrar,
+                    Date.now().toString()
+                );
+
+            }
+
+            localStorage.removeItem(chaveAula);
+
+            $("#modal-retorno").fadeOut(300);
+
+        });
+
+    $(document)
+        .off('keydown.modalRetorno')
+        .on('keydown.modalRetorno', function (e) {
+
+            if (!$('#modal-retorno').is(':visible')) {
+                return;
+            }
+
+            if (e.key === 'Enter') {
+
+                e.preventDefault();
+                $('#btn-retorno-sim').click();
+
+            }
+
+            if (e.key === 'Escape') {
+
+                e.preventDefault();
+                $('#btn-retorno-nao').click();
+
+            }
+
+        });
+
 }
