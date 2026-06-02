@@ -1,0 +1,137 @@
+<div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
+    <div class="row g-0">
+        <div class="col-12">
+            <div style="height:20px; background:#f39200; width:50%;"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
+        <div class="row align-items-start">
+            <div class="col-md-8"></div>
+            <div class="col-md-3 text-md-end text-center mt-4 mb-4">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;"
+                    alt="Logo de Manejo da dor crônica na aps">
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
+
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula">
+
+                    <div style="border: 2px solid #0d47ff;">
+                        <img src="img/graficoRadar.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <a href="arquivos/pdf/procurar.pdf" target="_blank">
+                        <button class="zoom-btn">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="27" cy="27" r="16" stroke="white" stroke-width="4" />
+                                <line x1="39" y1="39" x2="53" y2="53" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="27" y1="20" x2="27" y2="34" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="20" y1="27" x2="34" y2="27" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- TEXTO -->
+            <div class="col-lg-6  mb-4">
+
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icons/icon_animacao.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">ANIMAÇÃO</p>
+                </div>
+
+                <!-- TÍTULO -->
+                <h2 class="titulo-hq mb-3">
+                    Gráfico do radar
+                </h2>
+
+                <!-- TEXTO -->
+                <p>
+                    Para a compreensão mais simples e visual, o gráfico de radar pode ser utilizado na
+                    prática para organizar os diferentes fatores envolvidos na dor crônica. Para isso, assista a
+                    essa animação.
+                </p>
+
+                <p>
+                    Observe como a ferramenta ajuda a integrar informações sobre emoções, crenças,
+                    contexto social e funcionamento, sem substituir a escuta clínica. A proposta é ampliar a
+                    compreensão da complexidade da dor e apoiar o raciocínio clínico, tornando a avaliação
+                    mais clara e compartilhada.
+                </p>
+
+                <!-- SHARE -->
+                <div class="d-flex align-items-center gap-3 mt-3 zoom"
+                    onclick="compartilharArquivo('/arquivos/video/verificar.mp4')">
+                    <div style="width: 25px;">
+                        <img src="img/icons/icon_share.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Compartilhe este material.
+                    </p>
+                </div>
+
+                <!-- BOTÃO -->
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal6">
+                        ASSISTA
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal6" tabindex="-1">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 2rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0">
+
+                <!-- <video id="videoPlayer6" controls style="width:100%; height:auto;">
+                    <source src="arquivos/video/Animacao_311.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video> -->
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const videoModal6 = document.getElementById('videoModal6');
+
+    videoModal6.addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('videoPlayer6');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+</script>
