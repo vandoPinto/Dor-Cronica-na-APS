@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Dor Crônica na APS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.jpg">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/complemento.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/5380c389e4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/zoomify.min.css">
+    <script src="js/zoomify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <script src="https://cdn.userway.org/widget.js" data-account="YLDT6G9ChZ"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JDV8GWWW4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9JDV8GWWW4');
+    </script>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "wxpjtuiy6z");
+    </script>
+</head>
+
+<body id="main">
+    <div id="menuAulas" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+    <div class="fullscreen-btn pr-4">
+        <div class="fullscreen-enter fullscreen-hide"><a href="#" title="Entrar em modo tela-cheia."><i
+                    id="btnEnterFull" class="fas fa-expand-arrows-alt"></i></a>
+        </div>
+        <div class="fullscreen-exit fullscreen-show"><a href="#" title="Sair do modo tela-cheia."><i id="btnExitFull"
+                    class="fas fa-compress"></i></a></div>
+    </div>
+    <div id="modal-retorno" class="modal-retorno">
+        <div class="modal-retorno-box">
+
+            <h3>Continuar de onde parou?</h3>
+
+            <p>
+                Deseja continuar de onde parou?
+            </p>
+
+            <label class="checkbox-retorno">
+                <input type="checkbox" id="nao-mostrar-novamente">
+                Não mostrar esta mensagem novamente
+            </label>
+
+            <div class="botoes-retorno">
+                <button type="button" id="btn-retorno-sim">Sim</button>
+                <button type="button" id="btn-retorno-nao">Não</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="conteudo"></div>
+    <!-- rodapé -->
+    <div class="timeline">
+        <div class="row align-items-center navigation">
+            <div class="footer-box">
+                <div class="nav-area">
+                    <div class="nav-item home-btn-box zoom" onclick="location.reload();">
+                        <div>Início</div>
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="home-body"
+                                d="M10 30L32 12L54 30V52C54 54.2 52.2 56 50 56H14C11.8 56 10 54.2 10 52V30Z"
+                                stroke="#0d47ff" stroke-width="4" stroke-linejoin="round" />
+                            <path class="home-door" d="M26 56V38H38V56" stroke="#0d47ff" stroke-width="4" />
+                        </svg>
+                    </div>
+                    <div class="nav-item zoom" id="btVo" onclick="Navega('volta')">
+                        <div>Voltar</div>
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="circle-shape" cx="32" cy="32" r="26" stroke="#0d47ff" stroke-width="4" />
+                            <path class="arrow-shape" d="M38 18L24 32L38 46" stroke="#0d47ff" stroke-width="5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="nav-item zoom" id="btAv" onclick="Navega('avanca')">
+                        <div>Avançar</div>
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="circle-shape" cx="32" cy="32" r="26" stroke="#0d47ff" stroke-width="4" />
+                            <path class="arrow-shape" d="M26 18L40 32L26 46" stroke="#0d47ff" stroke-width="5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-title">Seu progresso <span id="progressoAtual">0</span>/<span
+                            id="totalProgresso">0</span></div>
+                    <div class="custom-progress">
+                        <div id="progress-bar" class="custom-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-0 mb-0">
+            <div class="col-12">
+                <div style="height:20px; background:#f39200;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/funcoes.js"></script>
+    <script>
+        $(document).ready(function () {
+            inicializaSistema();
+        });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        $(".fullscreen-enter").click(
+            function () {
+                document.documentElement.requestFullscreen().catch((e) => {
+                    console.log(e);
+                });
+            }
+        )
+        $(".fullscreen-exit").click(
+            function () {
+                if (document.exitFullscreen)
+                    document.exitFullscreen();
+                else if (document.mozCancelFullScreen)
+                    document.mozCancelFullScreen();
+                else if (document.webkitExitFullscreen)
+                    document.webkitExitFullscreen();
+                else if (document.msExitFullscreen)
+                    document.msExitFullscreen();
+            }
+        )
+    </script>
+
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
