@@ -105,15 +105,15 @@
 
 <!-- MODAL -->
 <div class="modal fade" id="videoModal4" tabindex="-1">
-    <button type="button" class="btn-close" data-bs-dismiss="modal"
-        style="position: absolute; top: 1rem; right: 2rem;"></button>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 4rem;"></button>
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
 
             <!-- BODY -->
             <div class="modal-body p-0" style="height:80vh;">
 
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jcpPWMlXvnY"
+                <iframe id="youtubeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/jcpPWMlXvnY"
                     title="Avaliação dos fatores psicossociais - Manejo da Dor Crônica na APS - (AU.3.4.1)"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -124,3 +124,15 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('#videoModal4').on('hidden.bs.modal', function () {
+        let iframe = $('#youtubeVideo');
+        let src = iframe.attr('src');
+
+        iframe.attr('src', '');
+        iframe.attr('src', src);
+    });
+
+    // id="youtubeVideo"
+</script>

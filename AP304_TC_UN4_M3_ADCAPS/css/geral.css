@@ -470,7 +470,7 @@ img {
     position: absolute;
     right: 20px;
     top: 20px;
-    z-index: 10000;
+    z-index: 1;
 }
 
 .fullscreen-btn i {
