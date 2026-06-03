@@ -12,6 +12,18 @@
     box-shadow: -8px 8px 12px var(--shadow-default);
 }
 
+.cards {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    background: var(--color-bg);
+    border: 2px solid var(--color-primary);
+    border-radius: 32px;
+    padding: 30px;
+    position: relative;
+    box-shadow: -8px 8px 12px var(--shadow-default);
+}
+
 /* =========================
    BOTÃO ZOOM
 ========================= */

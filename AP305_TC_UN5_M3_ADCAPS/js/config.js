@@ -79,9 +79,6 @@ items.push({
 items.push({
     'titulo': '', 'nome': 'Aula 12', 'arquivo': '12.html', 'identificador': '11'
 });
-items.push({
-    'titulo': '', 'nome': 'Aula 13', 'arquivo': '13.html', 'identificador': '13'
-});
 
 
 
