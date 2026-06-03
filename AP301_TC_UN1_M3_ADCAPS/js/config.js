@@ -82,13 +82,6 @@ items.push({
 items.push({
     'titulo': 'CONSIDERAÇÕES FINAIS', 'nome': 'Aula 13', 'arquivo': '13.html', 'identificador': '12'
 });
-items.push({
-    'titulo': '', 'nome': 'Aula 14', 'arquivo': '14.html', 'identificador': '13'
-});
-items.push({
-    'titulo': 'REFERÊNCIAS', 'nome': 'Aula 15', 'arquivo': '15.html', 'identificador': '14'
-});
-
 
 
 //Variáveis para progresso

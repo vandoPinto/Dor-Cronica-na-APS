@@ -18,65 +18,106 @@
             </div>
         </div>
 
-        <!-- TÍTULO -->
-        <div class="row">
-            <div class="col-lg-11 offset-lg-1">
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
 
-                <div class="d-flex align-items-center gap-3 mb-3">
-                    <div style="width: 45px;">
-                        <img src="img/icon_lembrete.jpg" class="img-fluid" alt="">
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula">
+
+                    <div style="border: 2px solid #0d47ff;">
+                        <img src="img/hq3_1_1.png" class="img-fluid" alt="">
                     </div>
-                    <h1 class="titulo-principal mb-0">
-                        Lembrete sobre o uso dos materiais
-                    </h1>
+
+                    <a href="arquivos/pdf/HQ_3.1.1.pdf" target="_blank">
+                        <button class="zoom-btn">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="27" cy="27" r="16" stroke="white" stroke-width="4" />
+                                <line x1="39" y1="39" x2="53" y2="53" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="27" y1="20" x2="27" y2="34" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="20" y1="27" x2="34" y2="27" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </a>
+
                 </div>
-
-            </div>
-        </div>
-
-        <!-- TEXTO -->
-        <div class="row mt-3">
-
-            <!-- TEXTO DE DESTAQUE -->
-            <div class="col-lg-3 offset-lg-1">
-
-                <p class="texto-destaque">
-                    <b>
-                        Os materiais deste módulo
-                        foram desenvolvidos para
-                        apoiar a sua prática, e
-                        também para fortalecer o
-                        trabalho em equipe na
-                        Atenção Primária à Saúde.
-                    </b>
-                </p>
-
             </div>
 
-            <!-- TEXTO NORMAL -->
+            <!-- TEXTO -->
             <div class="col-lg-6 mb-4">
 
-                <p>
-                    <span class="highlight">
-                        Você pode utilizá-los de diversas formas: compartilhar com colegas da equipe,
-                        baixar e imprimir para consulta na UBS, utilizar como base para grupos de estudo,
-                        rodas de conversa, reuniões de matriciamento ou atividades de educação
-                        permanente. Quanto mais esses conteúdos circularem, maior será o impacto na
-                        qualificação do cuidado às pessoas com dor crônica.
-                    </span>
-                </p>
+                <div class="d-flex align-items-center gap-3">
+                    <div style="width: 60px;">
+                        <img src="img/icon_exclamacao.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">HISTÓRIA EM QUADRINHOS</p>
+                </div>
+
+                <h2>
+                    Comunicação e cuidado centrado na pessoa
+                </h2>
 
                 <p>
                     <span class="highlight">
-                        Pedimos apenas que, ao compartilhar os materiais, seja mantida a referência à
-                        fonte, garantindo o reconhecimento do trabalho desenvolvido e a integridade do
-                        conteúdo. Nosso objetivo é que o conhecimento não fique restrito à plataforma,
-                        mas se transforme em prática, diálogo e cuidado no território.
+                        Talvez você já tenha vivido uma cena parecida. Agenda cheia, tempo
+                        curto, prontuário aberto… e uma pessoa com dor que precisa ser ouvida.
+                    </span>
+                    <br><br>
+                    <span class="highlight">
+                        Essa história em quadrinhos retrata um desafio cotidiano da APS:
+                        equilibrar a pressão do serviço com a necessidade de oferecer um
+                        cuidado verdadeiramente centrado na pessoa. Ao acompanhar a
+                        narrativa, observe como pequenas mudanças na postura e na escuta
+                        podem transformar completamente o encontro clínico.
                     </span>
                 </p>
 
+                <div class="d-flex align-items-center gap-3 ">
+
+                    <div class="zoom" style="width: 22px;">
+                        <a href="arquivos/pdf/HQ_3.1.1.pdf" download="HQ 3.1.1.pdf" target="_blank">
+                            <img src="img/icon_download.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+
+                    <div class="zoom" style="width: 35px;">
+                        <img src="img/icon_imprimir.jpg" class="img-fluid" alt=""
+                            onclick="imprimir('arquivos/pdf/HQ_3.1.1.pdf')">
+                    </div>
+
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Material disponível para<br>
+                        download e impressão
+                    </p>
+                </div>
+
+                <div class="centro-mobile">
+                    <button id="hq" class="btn-hq mt-4 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                        LEIA A HQ
+                    </button>
+                </div>
             </div>
         </div>
+    </div>
+</div>
 
+<!-- MODAL -->
+<div class="modal fade" id="pdfModal" tabindex="-1">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 2rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe src="arquivos/pdf/HQ_3.1.1.pdf" width="100%" height="100%" style="border:none;">
+                </iframe>
+            </div>
+
+        </div>
     </div>
 </div>

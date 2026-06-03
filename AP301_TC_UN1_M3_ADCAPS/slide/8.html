@@ -31,7 +31,7 @@
 
                         <!-- TÍTULO CARD -->
                         <p class="fw-bold mb-3" style="font-size:1.2rem;">
-                            Impacto da comunicação empática no manejo da dor
+                            Princípios da entrevista motivacional e estágios de prontidão de mudança
                         </p>
 
                         <!-- IMAGEM -->
@@ -41,14 +41,14 @@
 
                         <!-- AUTOR -->
                         <p class="mb-0 small" style="font-size: .6rem !important;">
-                            <strong>Virginia Turra</strong><br>
+                            Virginia Turra<br>
                             Doutora em Psicologia da Saúde, Psicóloga da Fundação Universidade de Brasília
                         </p>
                         <br><br>
                     </div>
 
                     <!-- BOTÃO PLAY -->
-                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal8">
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal10">
                         <svg viewBox="0 0 64 64">
                             <circle class="play-circle" cx="32" cy="32" r="28" fill="#ffffff" />
                             <path class="play-icon" d="M26 20L44 32L26 44Z" fill="#0d47ff" />
@@ -59,7 +59,7 @@
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-7 mb-4">
 
                 <!-- TIPO -->
                 <div class="d-flex align-items-center gap-3 mb-3">
@@ -69,27 +69,33 @@
                     <p class="mb-0 fw-bold">VIDEO</p>
                 </div>
 
-                <!-- TÍTULO (SEM underline e SEM highlight) -->
-                <h2 class="titulo-hq mb-3">
-                    Impacto da comunicação empática no manejo da dor
-                </h2>
+                <!-- TÍTULO -->
+                <h3 class="titulo-hq mb-3">
+                    Entrevista motivacional e estágios de prontidão para mudança
+                </h3>
 
                 <!-- TEXTO -->
                 <p>
-                    A essa altura do curso, já sabemos que a dor crônica não acontece só no corpo,
-                    mas atravessa emoções, expectativas e relações. Neste vídeo, Virginia Turra,
-                    doutora em Psicologia da Saúde, fala sobre como a comunicação empática pode
-                    influenciar diretamente a forma como a dor é vivida e manejada.
+                    Cuidar de pessoas com dor crônica é lidar, o tempo todo, com movimento:
+                    momentos de melhora, fases de estagnação, recaídas inesperadas e novos desafios
+                    que surgem ao longo do caminho. É justamente nessa dinâmica que muitas estratégias
+                    tradicionais deixam de funcionar. Neste vídeo, a doutora em psicologia da saúde,
+                    Virginia Turra, convida você a compreender a Entrevista Motivacional e os estágios
+                    de prontidão para mudança a partir da experiência concreta de quem vive com dor crônica.
                 </p>
 
                 <p>
-                    Ao assistir, reflita sobre como as suas palavras, gestos e atitudes podem ser
-                    parte do tratamento.
+                    Ela mostra porque tentar convencer, corrigir ou acelerar processos costuma aumentar
+                    a resistência, e como uma postura de acompanhamento, escuta qualificada e monitoramento
+                    contínuo pode qualificar o cuidado. Ao assistir, você perceberá que a cronicidade exige
+                    presença: estar junto nos momentos de avanço e de dificuldade, reconhecer cada conquista
+                    como grandes vitórias. Mais do que aplicar técnicas, trata-se de sustentar uma relação
+                    terapêutica que respeita o tempo, os limites e as escolhas de cada pessoa.
                 </p>
 
                 <!-- BOTÃO -->
                 <div class="centro-mobile">
-                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal8">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal10">
                         ASSISTA
                     </button>
                 </div>
@@ -101,7 +107,7 @@
 
 
 <!-- MODAL -->
-<div class="modal fade" id="videoModal8" tabindex="-1">
+<div class="modal fade" id="videoModal10" tabindex="-1">
     <button type="button" class="btn-close" data-bs-dismiss="modal"
         style="position: absolute; top: 1rem; right: 2rem;"></button>
     <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -110,8 +116,8 @@
             <!-- BODY -->
             <div class="modal-body p-0">
 
-                <video id="videoPlayer" controls style="width:100%; height:auto;">
-                    <source src="arquivos/video/V_3_1_1.mp4" type="video/mp4">
+                <video id="videoPlayer10" controls style="width:100%; height:auto;">
+                    <source src="arquivos/video/V_3_1_2.mp4" type="video/mp4">
                     Seu navegador não suporta vídeo.
                 </video>
 
@@ -122,10 +128,10 @@
 </div>
 
 <script>
-    const videoModal8 = document.getElementById('videoModal8');
+    const videoModal10 = document.getElementById('videoModal10');
 
-    videoModal8.addEventListener('hidden.bs.modal', function () {
-        const video = document.getElementById('videoPlayer');
+    videoModal10.addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('videoPlayer10');
 
         if (video) {
             video.pause();

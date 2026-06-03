@@ -27,29 +27,20 @@
 
                 <div class="card-aula">
 
-                    <div class="d-flex flex-column justify-content-between h-100 px-3 py-4 text-start">
-
-                        <!-- TEXTO -->
-                        <div>
-                            <br><br><br>
-                            <p class="fw-bold"
-                                style="color: var(--color-primary);font-size: 1.2rem !important;font-weight: 600 !important;">
-                                Educação do paciente e prontidão para mudança
-                            </p>
-
-                            <p style="color: var(--color-primary); font-size: .6rem !important;">
-                                Estratégias práticas
-                            </p>
-                            <br><br>
-                        </div>
-
+                    <div style="border: 2px solid #0d47ff;">
+                        <img src="img/infografico_prontidao.jpg" class="img-fluid" alt="">
                     </div>
 
-                    <!-- BOTÃO PLAY -->
-                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#pdfModal9">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
-                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                    <!-- BOTÃO ZOOM -->
+                    <button class="zoom-btn" data-bs-toggle="modal" data-bs-target="#pdfModal11">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="27" cy="27" r="16" stroke="white" stroke-width="4" />
+                            <line x1="39" y1="39" x2="53" y2="53" stroke="white" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="27" y1="20" x2="27" y2="34" stroke="white" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="20" y1="27" x2="34" y2="27" stroke="white" stroke-width="4"
+                                stroke-linecap="round" />
                         </svg>
                     </button>
 
@@ -57,44 +48,62 @@
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-7 mb-4">
+            <div class="col-lg-6 mb-4">
 
                 <!-- TIPO -->
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <div style="width: 50px;">
-                        <img src="img/icon_apresentacao.jpg" class="img-fluid" alt="">
+                        <img src="img/icon_infografico.jpg" class="img-fluid" alt="">
                     </div>
-                    <p class="mb-0 fw-bold">APRESENTAÇÃO</p>
+                    <p class="mb-0 fw-bold">INFOGRÁFICO</p>
                 </div>
 
                 <!-- TÍTULO -->
-                <h3 class="titulo-hq mb-3">
-                    Educação do paciente e prontidão para mudança
-                </h3>
+                <h2 class="titulo-hq mb-3">
+                    Estágios de prontidão para mudança
+                </h2>
 
                 <!-- TEXTO -->
                 <p>
-                    Muitos dos tratamentos no manejo da dor crônica envolvem, direta ou indiretamente,
-                    mudanças de comportamento. Mudar hábitos, rotinas, formas de lidar com a dor ou com
-                    o próprio corpo não é simples, nem para quem cuida, nem para quem é cuidado. Diante
-                    disso, é comum que profissionais de saúde assumam uma postura impositiva: orientam,
-                    explicam, alertam, insistem: mas, nem sempre isso funciona.
-                    <br><br>
-                    Nem todo mundo está pronto para mudar, e isso é perfeitamente normal. Essa realidade
-                    se aplica para os usuários e para nós, equipe. A ambivalência faz parte do processo,
-                    e tentar convencer ou persuadir costuma gerar resistência, não adesão.
-                    <br><br>
-                    Esta apresentação articula o reconhecimento dos estágios de prontidão para mudança
-                    com os princípios da Entrevista Motivacional, entendida não como um conjunto de técnicas,
-                    mas como um modo de estar com as pessoas. É uma abordagem centrada na colaboração,
-                    na aceitação e na compaixão, a qual busca evocar transformações que façam sentido
-                    para quem vive com dor.
+                    Para encerrar a unidade, este infográfico organiza visualmente os estágios de
+                    prontidão para mudança.
                 </p>
+
+                <p>
+                    Pode ser usado como um guia rápido para o cotidiano: ajuda a reconhecer em que
+                    momento a pessoa está e quais estratégias de comunicação podem fazer mais
+                    sentido naquele encontro.
+                </p>
+
+                <p>
+                    É um material para guardar por perto e revisitar sempre que necessário.
+                </p>
+
+                <!-- DOWNLOAD -->
+                <div class="d-flex align-items-center gap-3 ">
+
+                    <div class="zoom" style="width: 22px;">
+                        <a href="arquivos/pdf/inf3-1-1-entrevista-motivacional-v6.pdf"
+                            download="INF3.1.1_Entrevista Motivacional_V6.pdf" target="_blank">
+                            <img src="img/icon_download.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+
+                    <div class="zoom" style="width: 35px;">
+                        <img src="img/icon_imprimir.jpg" class="img-fluid" alt=""
+                            onclick="imprimir('arquivos/pdf/inf3-1-1-entrevista-motivacional-v6.pdf')">
+                    </div>
+
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Material disponível para<br>
+                        download e impressão
+                    </p>
+                </div>
 
                 <!-- BOTÃO -->
                 <div class="centro-mobile">
-                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal9">
-                        VEJA
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal11">
+                        ACESSE
                     </button>
                 </div>
 
@@ -105,7 +114,7 @@
 
 
 <!-- MODAL -->
-<div class="modal fade" id="pdfModal9" tabindex="-1">
+<div class="modal fade" id="pdfModal11" tabindex="-1">
     <button type="button" class="btn-close" data-bs-dismiss="modal"
         style="position: absolute; top: 1rem; right: 2rem;"></button>
     <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -113,9 +122,8 @@
 
             <!-- BODY -->
             <div class="modal-body p-0" style="height:80vh;">
-                <iframe
-                    src="arquivos/pdf/ap-3-1-1-educacao-do-paciente-e-prontidao-para-mudanca-estrategias-praticas-v6.pdf"
-                    width="100%" height="100%" style="border:none;">
+                <iframe src="arquivos/pdf/inf3-1-1-entrevista-motivacional-v6.pdf" width="100%" height="100%"
+                    style="border:none;">
                 </iframe>
             </div>
 

@@ -18,45 +18,120 @@
             </div>
         </div>
 
-        <!-- TÍTULO -->
-        <div class="row">
-            <div class="col-lg-6 offset-lg-1 barra_esquerda">
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
 
-                <h1 class="titulo-unidade mb-2">
-                    Unidade 1
-                </h1>
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
 
-                <h1 class="titulo-principal fw-bold">
-                    Técnicas de comunicação
-                </h1>
+                <div class="card-aula">
 
+                    <div style="padding:20px;">
+                        <img src="img/rodrigo_pacheco.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="text-start px-3 pb-3">
+                        <p style="color: var(--color-primary);font-weight: 600;font-size: 1rem !important;">
+                            Estratégias para melhorar a comunicação na APS
+                        </p>
+
+                        <p class="mb-0 small" style="color: var(--color-primary);font-size: .7rem !important;">
+                            <b>Rodrigo Pacheco</b><br>
+                            Médico de Família e Comunidade<br>
+                            Mestre em Saúde Pública
+                        </p>
+                        <br>
+                        <br>
+                    </div>
+
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                        </svg>
+                    </button>
+
+                </div>
             </div>
-        </div>
 
-        <!-- TEXTO -->
-        <div class="row mt-3 mb-4">
-            <div class="col-lg-6 offset-lg-1">
+            <!-- TEXTO -->
+            <div class="col-lg-6  mb-4">
 
-                <p>
-                    <span class="highlight">
-                        Nesta unidade, convidamos você a "re"conhecer a comunicação como uma
-                        ferramenta essencial e grande aliada na prática clínica. Cada material foi
-                        pensado para apoiar o desenvolvimento de uma escuta qualificada,
-                        empática e alinhada aos princípios do cuidado centrado na pessoa.
-                    </span>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icon_audio.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">AUDIOCAST</p>
+                </div>
+
+                <h2 class="titulo-hq mb-3">
+                    Estratégias para melhorar a comunicação com pessoas com dor crônica
+                </h2>
+
+                <p class="fw-bold">
+                    Como transformar a comunicação em aliada do cuidado,
+                    mesmo em contextos de alta demanda?
                 </p>
 
                 <p>
-                    <span class="highlight">
-                        Ao longo do percurso, você perceberá como pequenas mudanças na
-                        forma de se comunicar podem transformar a avaliação da dor crônica, tal
-                        qual a experiência do profissional no cuidado. A comunicação deixa de ser
-                        apenas um instrumento e passa a ser parte do próprio tratamento.
-                    </span>
+                    Neste audiocast, o médico de família e comunidade, Rodrigo Pacheco, compartilha
+                    reflexões práticas e estratégias possíveis para qualificar o diálogo com pessoas que
+                    vivem com dor crônica e entre os profissionais da equipe. Um convite para reconhecer
+                    desafios comuns e pensar em caminhos viáveis para superá-los.
                 </p>
+
+                <div class="d-flex align-items-center gap-3 mt-3 zoom"
+                    onclick="compartilharArquivo('/arquivos/video/AU_3_1_1.mp4')">
+                    <div style="width: 25px;">
+                        <img src="img/icon_share.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Compartilhe este material.
+                    </p>
+                </div>
+
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal">
+                        OUÇA AQUI
+                    </button>
+                </div>
 
             </div>
         </div>
-
     </div>
 </div>
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal" tabindex="-1">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 2rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0">
+
+                <video id="videoPlayer" controls style="width:100%; height:auto;">
+                    <source src="arquivos/video/AU_3_1_1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const videoModal = document.getElementById('videoModal');
+
+    videoModal.addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('videoPlayer');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+</script>

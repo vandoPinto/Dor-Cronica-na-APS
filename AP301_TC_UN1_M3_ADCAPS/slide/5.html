@@ -1,6 +1,6 @@
 <div class="container-fluid px-0">
 
-    <!-- TOPO -->
+    <!-- TOPO (mantido) -->
     <div class="row g-0">
         <div class="col-12">
             <div style="height:20px; background:#f39200; width:50%;"></div>
@@ -9,7 +9,7 @@
 
     <div class="container-fluid">
 
-        <!-- LOGO DIREITA -->
+        <!-- LOGO DIREITA (mantido) -->
         <div class="row align-items-start">
             <div class="col-md-8"></div>
             <div class="col-md-3 text-md-end text-center mt-4 mb-4">
@@ -23,34 +23,49 @@
 
             <!-- CARD -->
             <div
-                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+                class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
 
                 <div class="card-aula">
 
-                    <div style="padding:20px;">
-                        <img src="img/rodrigo_pacheco.jpg" class="img-fluid" alt="">
+                    <div class="d-flex flex-column justify-content-between h-100 px-3 py-4 text-start">
+
+                        <!-- TEXTO -->
+                        <div>
+                            <p style="font-size: 1.3rem !important; color: var(--color-primary); font-weight: 600;">
+                                Comunicação Efetiva e Empática na Atenção Primária:
+                            </p>
+
+                            <p style="color: var(--color-primary);">
+                                fortalecendo a relação com o paciente para um cuidado mais humano e eficaz.
+                            </p>
+                        </div>
+
+                        <!-- ÍCONES -->
+                        <div class="mt-4">
+
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div style="width:21px;">
+                                    <a href="arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf"
+                                        download="TEX 3.1.1 Cartilha Comunicação Empática na APS V6.pdf"
+                                        target="_blank">
+                                        <img src="img/icon_download.jpg" class="img-fluid zoom" alt="">
+                                    </a>
+                                </div>
+
+                                <div style="width:35px;">
+                                    <img src="img/icon_imprimir.jpg" class="img-fluid zoom" alt=""
+                                        onclick="imprimir('arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf')">
+                                </div>
+                            </div>
+
+                            <p class="mb-0 small" style="color:#0d47ff;">
+                                Material disponível para<br>
+                                download e impressão
+                            </p>
+
+                        </div>
+
                     </div>
-
-                    <div class="text-start px-3 pb-3">
-                        <p style="color: var(--color-primary);font-weight: 600;font-size: 1rem !important;">
-                            Estratégias para melhorar a comunicação na APS
-                        </p>
-
-                        <p class="mb-0 small" style="color: var(--color-primary);font-size: .7rem !important;">
-                            <b>Rodrigo Pacheco</b><br>
-                            Médico de Família e Comunidade<br>
-                            Mestre em Saúde Pública
-                        </p>
-                        <br>
-                        <br>
-                    </div>
-
-                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
-                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
-                        </svg>
-                    </button>
 
                 </div>
             </div>
@@ -58,42 +73,33 @@
             <!-- TEXTO -->
             <div class="col-lg-6  mb-4">
 
+                <!-- TIPO -->
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <div style="width: 50px;">
-                        <img src="img/icon_audio.jpg" class="img-fluid" alt="">
+                        <img src="img/icon_cartilha.jpg" class="img-fluid" alt="">
                     </div>
-                    <p class="mb-0 fw-bold">AUDIOCAST</p>
+                    <p class="mb-0 fw-bold">CARTILHA</p>
                 </div>
 
+                <!-- TÍTULO -->
                 <h2 class="titulo-hq mb-3">
-                    Estratégias para melhorar a comunicação com pessoas com dor crônica
+                    Orientações sobre comunicação empática
                 </h2>
 
-                <p class="fw-bold">
-                    Como transformar a comunicação em aliada do cuidado,
-                    mesmo em contextos de alta demanda?
-                </p>
-
+                <!-- TEXTO -->
                 <p>
-                    Neste audiocast, o médico de família e comunidade, Rodrigo Pacheco, compartilha
-                    reflexões práticas e estratégias possíveis para qualificar o diálogo com pessoas que
-                    vivem com dor crônica e entre os profissionais da equipe. Um convite para reconhecer
-                    desafios comuns e pensar em caminhos viáveis para superá-los.
+                    Empatia não é um dom reservado a poucos, é uma habilidade que pode
+                    ser desenvolvida. Nesta cartilha, você encontrará orientações práticas para
+                    fortalecer uma comunicação mais respeitosa e eficaz com pessoas que
+                    vivem com dor crônica. São sugestões pensadas para o cotidiano da APS,
+                    mas aplicáveis a diversos contextos, e ajudam a acolher o sofrimento: sem
+                    prometer soluções mágicas, porém construindo vínculos e cuidados reais.
                 </p>
 
-                <div class="d-flex align-items-center gap-3 mt-3 zoom"
-                    onclick="compartilharArquivo('/arquivos/video/AU_3_1_1.mp4')">
-                    <div style="width: 25px;">
-                        <img src="img/icon_share.jpg" class="img-fluid" alt="">
-                    </div>
-                    <p class="mb-0" style="color: var(--color-primary);">
-                        Compartilhe este material.
-                    </p>
-                </div>
-
+                <!-- BOTÃO -->
                 <div class="centro-mobile">
-                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        OUÇA AQUI
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal7">
+                        ACESSE
                     </button>
                 </div>
 
@@ -103,35 +109,19 @@
 </div>
 
 <!-- MODAL -->
-<div class="modal fade" id="videoModal" tabindex="-1">
+<div class="modal fade" id="pdfModal7" tabindex="-1">
     <button type="button" class="btn-close" data-bs-dismiss="modal"
         style="position: absolute; top: 1rem; right: 2rem;"></button>
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
 
             <!-- BODY -->
-            <div class="modal-body p-0">
-
-                <video id="videoPlayer" controls style="width:100%; height:auto;">
-                    <source src="arquivos/video/AU_3_1_1.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
-
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe src="arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf" width="100%"
+                    height="100%" style="border:none;">
+                </iframe>
             </div>
 
         </div>
     </div>
 </div>
-
-<script>
-    const videoModal = document.getElementById('videoModal');
-
-    videoModal.addEventListener('hidden.bs.modal', function () {
-        const video = document.getElementById('videoPlayer');
-
-        if (video) {
-            video.pause();
-            video.currentTime = 0;
-        }
-    });
-</script>

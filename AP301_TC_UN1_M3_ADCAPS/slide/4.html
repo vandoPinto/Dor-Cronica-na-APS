@@ -1,6 +1,6 @@
 <div class="container-fluid px-0">
 
-    <!-- TOPO -->
+    <!-- TOPO (mantido) -->
     <div class="row g-0">
         <div class="col-12">
             <div style="height:20px; background:#f39200; width:50%;"></div>
@@ -9,7 +9,7 @@
 
     <div class="container-fluid">
 
-        <!-- LOGO DIREITA -->
+        <!-- LOGO DIREITA (mantido) -->
         <div class="row align-items-start">
             <div class="col-md-8"></div>
             <div class="col-md-3 text-md-end text-center mt-4 mb-4">
@@ -23,100 +23,121 @@
 
             <!-- CARD -->
             <div
-                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+                class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
 
-                <div class="card-aula">
+                <div class="card-aula"
+                    style="background:var(--color-primary);color:#fff;border:none;box-shadow: -8px 8px 16px rgba(0,0,0,0.25);">
 
-                    <div style="border: 2px solid #0d47ff;">
-                        <img src="img/hq3_1_1.png" class="img-fluid" alt="">
+                    <div style="padding:20px;">
+                        <img src="img/animacao.jpg" class="img-fluid" alt="">
                     </div>
 
-                    <a href="arquivos/pdf/HQ_3.1.1.pdf" target="_blank">
-                        <button class="zoom-btn">
-                            <svg viewBox="0 0 64 64" fill="none">
-                                <circle cx="27" cy="27" r="16" stroke="white" stroke-width="4" />
-                                <line x1="39" y1="39" x2="53" y2="53" stroke="white" stroke-width="4"
-                                    stroke-linecap="round" />
-                                <line x1="27" y1="20" x2="27" y2="34" stroke="white" stroke-width="4"
-                                    stroke-linecap="round" />
-                                <line x1="20" y1="27" x2="34" y2="27" stroke="white" stroke-width="4"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </button>
-                    </a>
+                    <div class="text-start px-3 pb-3">
+                        <p class="fw-bold" style="color: white;">
+                            Técnicas de Comunicação
+                            Empática: fortalecendo a
+                            relação com a pessoa com
+                            dor crônica na Atenção
+                            Primária à Saúde
+                        </p>
+                        <br>
+                        <br>
+                    </div>
+
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal6">
+                        <svg viewBox="0 0 64 64">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#ffffff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="#0d47ff" />
+                        </svg>
+                    </button>
 
                 </div>
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6  mb-4">
 
-                <div class="d-flex align-items-center gap-3">
-                    <div style="width: 60px;">
-                        <img src="img/icon_exclamacao.jpg" class="img-fluid" alt="">
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icon_animacao.jpg" class="img-fluid" alt="">
                     </div>
-                    <p class="mb-0 fw-bold">HISTÓRIA EM QUADRINHOS</p>
+                    <p class="mb-0 fw-bold">ANIMAÇÃO</p>
                 </div>
 
-                <h2>
-                    Comunicação e cuidado centrado na pessoa
+                <!-- TÍTULO -->
+                <h2 class="titulo-hq mb-3">
+                    Por que a comunicação empática é tão importante?
                 </h2>
 
+                <!-- TEXTO -->
                 <p>
-                    <span class="highlight">
-                        Talvez você já tenha vivido uma cena parecida. Agenda cheia, tempo curto, prontuário
-                        aberto… e uma pessoa com dor que precisa ser ouvida.
-                    </span>
-                    <br><br>
-                    <span class="highlight">
-                        Essa história em quadrinhos retrata um desafio cotidiano da APS: equilibrar a pressão
-                        do serviço com a necessidade de oferecer um cuidado verdadeiramente centrado na
-                        pessoa. Ao acompanhar a narrativa, observe como pequenas mudanças na postura e
-                        na escuta podem transformar completamente o encontro clínico.
-                    </span>
+                    Antes de qualquer técnica ou protocolo, existe o encontro entre duas pessoas.
+                    Essa animação convida você a refletir sobre o papel da comunicação empática na
+                    Atenção Primária à Saúde e sobre como isso pode fortalecer ou fragilizar a relação
+                    com quem vive com dor crônica.
                 </p>
 
-                <div class="d-flex align-items-center gap-3 ">
+                <p>
+                    A proposta é olhar para a comunicação como parte do cuidado: algo que constrói
+                    confiança, amplia a compreensão das necessidades individuais e sustenta uma
+                    parceria real entre profissional e usuário.
+                </p>
 
-                    <div class="zoom" style="width: 22px;">
-                        <a href="arquivos/pdf/HQ_3.1.1.pdf" download="HQ 3.1.1.pdf" target="_blank">
-                            <img src="img/icon_download.jpg" class="img-fluid" alt="">
-                        </a>
+                <!-- SHARE -->
+                <div class="d-flex align-items-center gap-3 mt-3 zoom"
+                    onclick="compartilharArquivo('/arquivos/video/Animacao_311.mp4')">
+                    <div style="width: 25px;">
+                        <img src="img/icon_share.jpg" class="img-fluid" alt="">
                     </div>
-
-                    <div class="zoom" style="width: 35px;">
-                        <img src="img/icon_imprimir.jpg" class="img-fluid" alt=""
-                            onclick="imprimir('arquivos/pdf/HQ_3.1.1.pdf')">
-                    </div>
-
                     <p class="mb-0" style="color: var(--color-primary);">
-                        Material disponível para<br>
-                        download e impressão
+                        Compartilhe este material.
                     </p>
                 </div>
 
+                <!-- BOTÃO -->
                 <div class="centro-mobile">
-                    <button id="hq" class="btn-hq mt-4 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                        LEIA A HQ
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal6">
+                        ASSISTA
                     </button>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
 
+
 <!-- MODAL -->
-<div class="modal fade" id="pdfModal" tabindex="-1">
+<div class="modal fade" id="videoModal6" tabindex="-1">
     <button type="button" class="btn-close" data-bs-dismiss="modal"
         style="position: absolute; top: 1rem; right: 2rem;"></button>
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
+
             <!-- BODY -->
-            <div class="modal-body p-0" style="height:80vh;">
-                <iframe src="arquivos/pdf/HQ_3.1.1.pdf" width="100%" height="100%" style="border:none;">
-                </iframe>
+            <div class="modal-body p-0">
+
+                <video id="videoPlayer6" controls style="width:100%; height:auto;">
+                    <source src="arquivos/video/Animacao_311.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo.
+                </video>
+
             </div>
 
         </div>
     </div>
 </div>
+
+<script>
+    const videoModal6 = document.getElementById('videoModal6');
+
+    videoModal6.addEventListener('hidden.bs.modal', function () {
+        const video = document.getElementById('videoPlayer6');
+
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+</script>

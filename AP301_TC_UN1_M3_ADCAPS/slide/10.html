@@ -19,84 +19,52 @@
         </div>
 
         <!-- CONTEÚDO -->
-        <div class="row align-items-center">
+        <div class="row align-items-center mt-5">
 
-            <!-- CARD -->
+            <!-- PASTA -->
             <div
-                class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+                class="col-lg-4 offset-lg-1 d-flex justify-content-center mt-5 mb-4 animate__animated animate__backInLeft">
 
-                <div class="card-aula" style="background:var(--color-primary);color:#fff;border:none;">
-
-                    <div class="px-3 pt-4 text-start">
-
-                        <!-- TÍTULO CARD -->
-                        <p class="fw-bold mb-3" style="font-size:1.2rem;">
-                            Princípios da entrevista motivacional e estágios de prontidão de mudança
-                        </p>
-
-                        <!-- IMAGEM -->
-                        <div class="mb-3">
-                            <img src="img/video_thumb.jpg" class="img-fluid" alt="">
+                <a href="arquivos/pdf/NICE-2021_Chronic-pain-primary-and-secondary-in-over-16s-assessment-of-all-chronic-pain-and-management-of-chronic-primary-pain.pdf"
+                    target="_blank" style="text-decoration: none;">
+                    <div class="folder-box">
+                        <div class="folder-tab"></div>
+                        <div class="folder-content">
+                            <p class="folder-title">
+                                Material<br>Complementar
+                            </p>
+                            <p class="folder-subtitle">
+                                Clique para acessar
+                            </p>
                         </div>
-
-                        <!-- AUTOR -->
-                        <p class="mb-0 small" style="font-size: .6rem !important;">
-                            Virginia Turra<br>
-                            Doutora em Psicologia da Saúde, Psicóloga da Fundação Universidade de Brasília
-                        </p>
-                        <br><br>
                     </div>
+                </a>
 
-                    <!-- BOTÃO PLAY -->
-                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal10">
-                        <svg viewBox="0 0 64 64">
-                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#ffffff" />
-                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="#0d47ff" />
-                        </svg>
-                    </button>
-
-                </div>
             </div>
 
             <!-- TEXTO -->
-            <div class="col-lg-7 mb-4">
+            <div class="col-lg-4 mt-4 mb-4">
 
-                <!-- TIPO -->
+                <!-- HEADER (ÍCONE + TEXTO alinhados) -->
                 <div class="d-flex align-items-center gap-3 mb-3">
-                    <div style="width: 50px;">
-                        <img src="img/icon_video.jpg" class="img-fluid" alt="">
+                    <div style="width:40px;">
+                        <img src="img/icon_material.jpg" class="img-fluid" alt="">
                     </div>
-                    <p class="mb-0 fw-bold">VIDEO</p>
+                    <h2 class="mb-0 titulo-hq">
+                        Saiba mais
+                    </h2>
                 </div>
-
-                <!-- TÍTULO -->
-                <h3 class="titulo-hq mb-3">
-                    Entrevista motivacional e estágios de prontidão para mudança
-                </h3>
 
                 <!-- TEXTO -->
                 <p>
-                    Cuidar de pessoas com dor crônica é lidar, o tempo todo, com movimento:
-                    momentos de melhora, fases de estagnação, recaídas inesperadas e novos desafios
-                    que surgem ao longo do caminho. É justamente nessa dinâmica que muitas estratégias
-                    tradicionais deixam de funcionar. Neste vídeo, a doutora em psicologia da saúde,
-                    Virginia Turra, convida você a compreender a Entrevista Motivacional e os estágios
-                    de prontidão para mudança a partir da experiência concreta de quem vive com dor crônica.
-                </p>
-
-                <p>
-                    Ela mostra porque tentar convencer, corrigir ou acelerar processos costuma aumentar
-                    a resistência, e como uma postura de acompanhamento, escuta qualificada e monitoramento
-                    contínuo pode qualificar o cuidado. Ao assistir, você perceberá que a cronicidade exige
-                    presença: estar junto nos momentos de avanço e de dificuldade, reconhecer cada conquista
-                    como grandes vitórias. Mais do que aplicar técnicas, trata-se de sustentar uma relação
-                    terapêutica que respeita o tempo, os limites e as escolhas de cada pessoa.
+                    Confira o material complementar selecionado para aprofundar o conhecimento
+                    sobre os temas abordados nesta unidade.
                 </p>
 
                 <!-- BOTÃO -->
                 <div class="centro-mobile">
-                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal10">
-                        ASSISTA
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#pdfModal12">
+                        ACESSE
                     </button>
                 </div>
 
@@ -105,37 +73,21 @@
     </div>
 </div>
 
-
 <!-- MODAL -->
-<div class="modal fade" id="videoModal10" tabindex="-1">
+<div class="modal fade" id="pdfModal12" tabindex="-1">
     <button type="button" class="btn-close" data-bs-dismiss="modal"
         style="position: absolute; top: 1rem; right: 2rem;"></button>
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
 
             <!-- BODY -->
-            <div class="modal-body p-0">
-
-                <video id="videoPlayer10" controls style="width:100%; height:auto;">
-                    <source src="arquivos/video/V_3_1_2.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo.
-                </video>
-
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe
+                    src="arquivos/pdf/NICE-2021_Chronic-pain-primary-and-secondary-in-over-16s-assessment-of-all-chronic-pain-and-management-of-chronic-primary-pain.pdf"
+                    width="100%" height="100%" style="border:none;">
+                </iframe>
             </div>
 
         </div>
     </div>
 </div>
-
-<script>
-    const videoModal10 = document.getElementById('videoModal10');
-
-    videoModal10.addEventListener('hidden.bs.modal', function () {
-        const video = document.getElementById('videoPlayer10');
-
-        if (video) {
-            video.pause();
-            video.currentTime = 0;
-        }
-    });
-</script>
