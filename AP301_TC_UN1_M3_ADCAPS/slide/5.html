@@ -23,49 +23,27 @@
 
             <!-- CARD -->
             <div
-                class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
 
                 <div class="card-aula">
 
-                    <div class="d-flex flex-column justify-content-between h-100 px-3 py-4 text-start">
-
-                        <!-- TEXTO -->
-                        <div>
-                            <p style="font-size: 1.3rem !important; color: var(--color-primary); font-weight: 600;">
-                                Comunicação Efetiva e Empática na Atenção Primária:
-                            </p>
-
-                            <p style="color: var(--color-primary);">
-                                fortalecendo a relação com o paciente para um cuidado mais humano e eficaz.
-                            </p>
-                        </div>
-
-                        <!-- ÍCONES -->
-                        <div class="mt-4">
-
-                            <div class="d-flex align-items-center gap-3 mb-2">
-                                <div style="width:21px;">
-                                    <a href="arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf"
-                                        download="TEX 3.1.1 Cartilha Comunicação Empática na APS V6.pdf"
-                                        target="_blank">
-                                        <img src="img/icon_download.jpg" class="img-fluid zoom" alt="">
-                                    </a>
-                                </div>
-
-                                <div style="width:35px;">
-                                    <img src="img/icon_imprimir.jpg" class="img-fluid zoom" alt=""
-                                        onclick="imprimir('arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf')">
-                                </div>
-                            </div>
-
-                            <p class="mb-0 small" style="color:#0d47ff;">
-                                Material disponível para<br>
-                                download e impressão
-                            </p>
-
-                        </div>
-
+                    <div style="border: 2px solid #0d47ff;">
+                        <img src="img/tranquilizacao_afetiva.jpg" class="img-fluid" alt="">
                     </div>
+
+                    <a href="arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf" target="_blank">
+                        <button class="zoom-btn">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="27" cy="27" r="16" stroke="white" stroke-width="4" />
+                                <line x1="39" y1="39" x2="53" y2="53" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="27" y1="20" x2="27" y2="34" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <line x1="20" y1="27" x2="34" y2="27" stroke="white" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </a>
 
                 </div>
             </div>
@@ -76,7 +54,7 @@
                 <!-- TIPO -->
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <div style="width: 50px;">
-                        <img src="img/icon_cartilha.jpg" class="img-fluid" alt="">
+                        <img src="img/icons/icon_cartilha.jpg" class="img-fluid" alt="">
                     </div>
                     <p class="mb-0 fw-bold">CARTILHA</p>
                 </div>
@@ -95,6 +73,27 @@
                     mas aplicáveis a diversos contextos, e ajudam a acolher o sofrimento: sem
                     prometer soluções mágicas, porém construindo vínculos e cuidados reais.
                 </p>
+
+                <!-- ÍCONES -->
+                <div class="d-flex align-items-center gap-3 ">
+
+                    <div class="zoom" style="width: 22px;">
+                        <a href="arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf"
+                            download="TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf" target="_blank">
+                            <img src="img/icons/icon_download.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+
+                    <div class="zoom" style="width: 35px;">
+                        <img src="img/icons/icon_imprimir.jpg" class="img-fluid" alt=""
+                            onclick="imprimir('arquivos/pdf/TEX_3.1.1_Cartilha_Comunicacao_Empatica_na_APS_V6.pdf')">
+                    </div>
+
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Material disponível para<br>
+                        download e impressão
+                    </p>
+                </div>
 
                 <!-- BOTÃO -->
                 <div class="centro-mobile">
