@@ -76,7 +76,7 @@
 
     <script>
 
-        const API_URL = "https://script.google.com/macros/s/AKfycby9uUMl1wq8kwJO6sqSBNQVKTIlC2HxyaxYHwyoZSS0akgkTRhGEcZzG5MR_NDrglEMSA/exec";
+        const API_URL = "https://script.google.com/macros/s/AKfycbw1UsXeDW9ExJUsaIcYLczGACeuDPaFvmrEAJ_Ondipsb68fIdjDmCjb-NwXOVSm-gs_Q/exec";
 
         async function carregarDados() {
 
@@ -234,17 +234,13 @@
 
             try {
 
-                const form = new FormData();
-
-                form.append("modulo", modulo);
-                form.append("id", id);
-                form.append("ajuste", ajuste);
-                form.append("finalizado", finalizado);
-
-                await fetch(API_URL, {
-                    method: "POST",
-                    body: form
-                });
+                await fetch(
+                    `${API_URL}?acao=salvar` +
+                    `&modulo=${encodeURIComponent(modulo)}` +
+                    `&id=${encodeURIComponent(id)}` +
+                    `&ajuste=${ajuste}` +
+                    `&finalizado=${finalizado}`
+                );
 
             } catch (erro) {
 
