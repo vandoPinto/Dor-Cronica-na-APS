@@ -7,62 +7,12 @@
     <title>Controle de Homologação</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: #f4f6f9;
-            font-family: 'Segoe UI', sans-serif
-        }
 
-        .header-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px;
-            margin: 25px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, .08)
-        }
-
-        .logo {
-            height: 70px
-        }
-
-        .module-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, .05)
-        }
-
-        .module-header {
-            background: linear-gradient(135deg, #1f4b99, #2f6ad9);
-            color: #fff;
-            padding: 16px 24px;
-            font-size: 20px;
-            font-weight: 600;
-            display: flex;
-            justify-content: space-between
-        }
-
-        .table thead {
-            background: #edf2f7
-        }
-
-        .table thead th {
-            font-size: 12px;
-            text-transform: uppercase
-        }
-
-        .form-check-input {
-            width: 20px;
-            height: 20px
-        }
-    </style>
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
+
     <div class="container-fluid px-4">
         <div class="header-card">
             <div>
@@ -71,12 +21,62 @@
             </div>
             <img src="./img/logo_m.png" class="logo">
         </div>
+        <div class="row mb-4" id="dashboard">
+
+            <div class="col-md-3 mb-3">
+                <div class="dashboard-card total">
+                    <div class="titulo">Total de Itens</div>
+                    <div class="valor" id="totalItens">0</div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="dashboard-card finalizado">
+                    <div class="titulo">Finalizados</div>
+                    <div class="valor" id="totalFinalizados">0</div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="dashboard-card ajuste">
+                    <div class="titulo">Em Ajuste</div>
+                    <div class="valor" id="totalAjuste">0</div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="dashboard-card pendente">
+                    <div class="titulo">Pendentes</div>
+                    <div class="valor" id="totalPendentes">0</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dashboard-progress">
+
+            <div class="d-flex justify-content-between mb-2">
+
+                <strong>Progresso Geral</strong>
+
+                <strong id="percentualConclusao">0%</strong>
+
+            </div>
+
+            <div class="progress" style="height:30px">
+
+                <div id="barraConclusao" class="progress-bar bg-success" role="progressbar" style="width:0%">
+                </div>
+
+            </div>
+
+        </div>
         <div id="modulos"></div>
     </div>
 
     <script>
 
-        const API_URL = "https://script.google.com/macros/s/AKfycbw1UsXeDW9ExJUsaIcYLczGACeuDPaFvmrEAJ_Ondipsb68fIdjDmCjb-NwXOVSm-gs_Q/exec";
+        const API_URL = "https://script.google.com/macros/s/AKfycbwCtrpUYvsdyZpyCHfHFTcXpHBDylsmpOxTS3QO91_bbvzlH4-EZxRnO60r-RxTREq74A/exec";
 
         async function carregarDados() {
 
@@ -92,6 +92,48 @@
 
                 const response = await fetch(API_URL);
                 const registros = await response.json();
+                const totalItens = registros.length;
+
+                const totalFinalizados = registros.filter(
+                    item => item.finalizado === true
+                ).length;
+
+                const totalAjuste = registros.filter(
+                    item => item.ajuste === true &&
+                        item.finalizado !== true
+                ).length;
+
+                const totalPendentes =
+                    totalItens -
+                    totalFinalizados -
+                    totalAjuste;
+
+                const percentual =
+                    totalItens > 0
+                        ? ((totalFinalizados / totalItens) * 100)
+                            .toFixed(1)
+                        : 0;
+
+                document.getElementById("totalItens").textContent =
+                    totalItens;
+
+                document.getElementById("totalFinalizados").textContent =
+                    totalFinalizados;
+
+                document.getElementById("totalAjuste").textContent =
+                    totalAjuste;
+
+                document.getElementById("totalPendentes").textContent =
+                    totalPendentes;
+
+                document.getElementById("percentualConclusao").textContent =
+                    percentual + "%";
+
+                document.getElementById("barraConclusao").style.width =
+                    percentual + "%";
+
+                document.getElementById("barraConclusao").textContent =
+                    percentual + "%";
 
                 const dados = {};
 
@@ -150,9 +192,37 @@
                                 )">
                         </td>
 
-                        <td>${item.relatorio}</td>
+                        <td>
 
-                        <td>${item.observacao}</td>
+                            ${item.relatorio
+                                ? `
+                                <a
+                                    href="${item.relatorio}"
+                                    target="_blank"
+                                    class="btn btn-sm btn-outline-primary"
+                                >
+                                    <i class="fa-solid fa-file-word"></i>
+                                    Abrir Relatório
+                                </a>
+                                `
+                                : "-"
+                            }
+
+                        </td>
+
+                      <td>
+
+                   <textarea
+                        class="campo-observacao"
+                        oninput="salvarObservacao(
+                            '${item.modulo}',
+                            '${item.id}',
+                            this.value,
+                            this
+                        )"
+                    >${item.observacao || ''}</textarea>
+
+                    </td>
 
                     </tr>
                     `;
@@ -249,6 +319,48 @@
                 alert("Erro ao salvar.");
 
             }
+
+        }
+
+        const timersObservacao = {};
+
+        function salvarObservacao(
+            modulo,
+            id,
+            observacao,
+            elemento
+        ) {
+
+            const chave = `${modulo}_${id}`;
+
+            elemento.classList.remove("salvo");
+            elemento.classList.add("salvando");
+
+            clearTimeout(timersObservacao[chave]);
+
+            timersObservacao[chave] = setTimeout(async () => {
+
+                try {
+
+                    await fetch(
+                        `${API_URL}?acao=observacao` +
+                        `&modulo=${encodeURIComponent(modulo)}` +
+                        `&id=${encodeURIComponent(id)}` +
+                        `&observacao=${encodeURIComponent(observacao)}`
+                    );
+
+                    elemento.classList.remove("salvando");
+                    elemento.classList.add("salvo");
+
+                } catch (erro) {
+
+                    console.error(erro);
+
+                    elemento.classList.remove("salvando");
+
+                }
+
+            }, 800);
 
         }
 
