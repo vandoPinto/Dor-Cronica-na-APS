@@ -89,7 +89,9 @@ async function carregarDados() {
             dados[modulo].forEach(item => {
 
                 linhas += `
-                    <tr>
+                    <tr
+                        data-modulo="${item.modulo}"
+                        data-id="${item.id}">
 
                         <td>${item.id}</td>
 
@@ -101,28 +103,18 @@ async function carregarDados() {
 
                         <td>
                             <input
-                                class="form-check-input"
+                                class="form-check-input ajuste"
                                 type="checkbox"
                                 ${item.ajuste ? "checked" : ""}
-                                onchange="atualizarItem(
-                                    '${item.modulo}',
-                                    '${item.id}',
-                                    this.checked,
-                                    ${item.finalizado}
-                                )">
+                                onchange="atualizarLinha(this)">
                         </td>
 
                         <td>
                             <input
-                                class="form-check-input"
+                                class="form-check-input finalizado"
                                 type="checkbox"
                                 ${item.finalizado ? "checked" : ""}
-                                onchange="atualizarItem(
-                                    '${item.modulo}',
-                                    '${item.id}',
-                                    ${item.ajuste},
-                                    this.checked
-                                )">
+                                onchange="atualizarLinha(this)">
                         </td>
 
                         <td>
@@ -259,6 +251,31 @@ async function carregarDados() {
         console.error(erro);
 
     }
+
+}
+
+function atualizarLinha(elemento) {
+
+    const linha = elemento.closest("tr");
+
+    const modulo =
+        linha.dataset.modulo;
+
+    const id =
+        linha.dataset.id;
+
+    const ajuste =
+        linha.querySelector(".ajuste").checked;
+
+    const finalizado =
+        linha.querySelector(".finalizado").checked;
+
+    atualizarItem(
+        modulo,
+        id,
+        ajuste,
+        finalizado
+    );
 
 }
 
