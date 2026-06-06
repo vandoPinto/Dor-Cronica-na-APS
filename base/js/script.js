@@ -5,6 +5,8 @@ let ignorarProximaAtualizacao = false;
 let scrollSalvo = 0;
 let modulosAbertos = [];
 
+alert('versao 2.0');
+
 async function carregarDados() {
     salvarEstadoTela();
 
