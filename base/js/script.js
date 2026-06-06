@@ -1,7 +1,12 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbwCtrpUYvsdyZpyCHfHFTcXpHBDylsmpOxTS3QO91_bbvzlH4-EZxRnO60r-RxTREq74A/exec";
 let hashAtual = "";
+let ignorarProximaAtualizacao = false;
+
+let scrollSalvo = 0;
+let modulosAbertos = [];
 
 async function carregarDados() {
+    salvarEstadoTela();
 
     const container = document.getElementById("modulos");
 
@@ -241,6 +246,8 @@ async function carregarDados() {
 
         });
 
+        restaurarEstadoTela();
+
     } catch (erro) {
 
         container.innerHTML = `
@@ -263,6 +270,8 @@ async function atualizarItem(
 ) {
 
     try {
+
+        ignorarProximaAtualizacao = true;
 
         await fetch(
             `${API_URL}?acao=salvar` +
@@ -302,12 +311,16 @@ function salvarObservacao(
 
         try {
 
+            ignorarProximaAtualizacao = true;
+
             await fetch(
                 `${API_URL}?acao=observacao` +
                 `&modulo=${encodeURIComponent(modulo)}` +
                 `&id=${encodeURIComponent(id)}` +
                 `&observacao=${encodeURIComponent(observacao)}`
             );
+
+            // carregarDados();
 
             elemento.classList.remove("salvando");
             elemento.classList.add("salvo");
@@ -329,7 +342,6 @@ async function verificarAtualizacoes() {
     try {
 
         const response = await fetch(API_URL);
-
         const registros = await response.json();
 
         const novoHash =
@@ -340,10 +352,16 @@ async function verificarAtualizacoes() {
             novoHash !== hashAtual
         ) {
 
+            if (ignorarProximaAtualizacao) {
+
+                hashAtual = novoHash;
+                ignorarProximaAtualizacao = false;
+                return;
+
+            }
+
             document
-                .getElementById(
-                    "toastAtualizacao"
-                )
+                .getElementById("toastAtualizacao")
                 .style.display = "flex";
 
         }
@@ -399,6 +417,54 @@ function toggleModulo(header) {
         }, 300);
 
     }
+
+}
+
+function salvarEstadoTela() {
+
+    scrollSalvo = window.scrollY;
+
+    modulosAbertos = [];
+
+    document
+        .querySelectorAll(".module-card")
+        .forEach((card, indice) => {
+
+            if (card.classList.contains("aberto")) {
+                modulosAbertos.push(indice);
+            }
+
+        });
+
+}
+
+function restaurarEstadoTela() {
+
+    document
+        .querySelectorAll(".module-card")
+        .forEach((card, indice) => {
+
+            if (modulosAbertos.includes(indice)) {
+
+                card.classList.add("aberto");
+
+                const conteudo =
+                    card.querySelector(".modulo-conteudo");
+
+                conteudo.style.maxHeight =
+                    conteudo.scrollHeight + "px";
+
+            }
+
+        });
+
+    setTimeout(() => {
+
+        window.scrollTo({
+            top: scrollSalvo
+        });
+
+    }, 100);
 
 }
 
