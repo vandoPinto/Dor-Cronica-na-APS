@@ -4,6 +4,7 @@ let ultimaAlteracaoLocal = 0;
 
 let scrollSalvo = 0;
 let modulosAbertos = [];
+let ultimaAcaoComErro = null;
 
 // alert('versao 3.0');
 
@@ -297,6 +298,15 @@ async function atualizarAjuste(
 
         console.error(erro);
 
+        mostrarErro(
+            "Falha ao salvar ajuste",
+            () => atualizarAjuste(
+                modulo,
+                id,
+                valor
+            )
+        );
+
     }
 
 }
@@ -326,6 +336,15 @@ async function atualizarFinalizado(
     } catch (erro) {
 
         console.error(erro);
+
+        mostrarErro(
+            "Falha ao salvar finalização",
+            () => atualizarFinalizado(
+                modulo,
+                id,
+                valor
+            )
+        );
 
     }
 
@@ -374,6 +393,16 @@ function salvarObservacao(
 
             elemento.classList.remove("salvando");
 
+            mostrarErro(
+                "Falha ao salvar observação",
+                () => salvarObservacao(
+                    modulo,
+                    id,
+                    observacao,
+                    elemento
+                )
+            );
+
         }
 
     }, 800);
@@ -419,6 +448,15 @@ async function verificarAtualizacoes() {
     } catch (erro) {
 
         console.error(erro);
+
+        document
+            .getElementById("toastErro")
+            .style.display = "flex";
+
+        document
+            .getElementById("mensagemErro")
+            .textContent =
+            "Sem conexão com o servidor";
 
     }
 
@@ -522,6 +560,37 @@ function ajustarAlturaTextarea(textarea) {
 
     textarea.style.height = "auto";
     textarea.style.height = textarea.scrollHeight + "px";
+
+}
+
+function mostrarErro(
+    mensagem,
+    callback
+) {
+
+    ultimaAcaoComErro = callback;
+
+    document
+        .getElementById("mensagemErro")
+        .textContent = mensagem;
+
+    document
+        .getElementById("toastErro")
+        .style.display = "flex";
+
+}
+
+function refazerUltimaAcao() {
+
+    document
+        .getElementById("toastErro")
+        .style.display = "none";
+
+    if (ultimaAcaoComErro) {
+
+        ultimaAcaoComErro();
+
+    }
 
 }
 
