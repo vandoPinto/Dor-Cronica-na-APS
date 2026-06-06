@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbwCtrpUYvsdyZpyCHfHFTcXpHBDylsmpOxTS3QO91_bbvzlH4-EZxRnO60r-RxTREq74A/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbyDAqkTL_uIKH_yXdIw2nlTTbiGsCyW_WLrhfmc-Hh1YJuT203kdcOYdkgWOXHIYYjx6g/exec";
 let hashAtual = "";
 let ignorarProximaAtualizacao = false;
 
@@ -106,7 +106,11 @@ async function carregarDados() {
                                 class="form-check-input ajuste"
                                 type="checkbox"
                                 ${item.ajuste ? "checked" : ""}
-                                onchange="atualizarLinha(this)">
+                                onchange="atualizarAjuste(
+                                    '${item.modulo}',
+                                    '${item.id}',
+                                    this.checked
+                                )">
                         </td>
 
                         <td>
@@ -114,7 +118,11 @@ async function carregarDados() {
                                 class="form-check-input finalizado"
                                 type="checkbox"
                                 ${item.finalizado ? "checked" : ""}
-                                onchange="atualizarLinha(this)">
+                                onchange="atualizarFinalizado(
+                                    '${item.modulo}',
+                                    '${item.id}',
+                                    this.checked
+                                )">
                         </td>
 
                         <td>
@@ -254,36 +262,10 @@ async function carregarDados() {
 
 }
 
-function atualizarLinha(elemento) {
-
-    const linha = elemento.closest("tr");
-
-    const modulo =
-        linha.dataset.modulo;
-
-    const id =
-        linha.dataset.id;
-
-    const ajuste =
-        linha.querySelector(".ajuste").checked;
-
-    const finalizado =
-        linha.querySelector(".finalizado").checked;
-
-    atualizarItem(
-        modulo,
-        id,
-        ajuste,
-        finalizado
-    );
-
-}
-
-async function atualizarItem(
+async function atualizarAjuste(
     modulo,
     id,
-    ajuste,
-    finalizado
+    valor
 ) {
 
     try {
@@ -291,18 +273,40 @@ async function atualizarItem(
         ignorarProximaAtualizacao = true;
 
         await fetch(
-            `${API_URL}?acao=salvar` +
+            `${API_URL}?acao=ajuste` +
             `&modulo=${encodeURIComponent(modulo)}` +
             `&id=${encodeURIComponent(id)}` +
-            `&ajuste=${ajuste}` +
-            `&finalizado=${finalizado}`
+            `&valor=${valor}`
         );
 
     } catch (erro) {
 
         console.error(erro);
 
-        alert("Erro ao salvar.");
+    }
+
+}
+
+async function atualizarFinalizado(
+    modulo,
+    id,
+    valor
+) {
+
+    try {
+
+        ignorarProximaAtualizacao = true;
+
+        await fetch(
+            `${API_URL}?acao=finalizado` +
+            `&modulo=${encodeURIComponent(modulo)}` +
+            `&id=${encodeURIComponent(id)}` +
+            `&valor=${valor}`
+        );
+
+    } catch (erro) {
+
+        console.error(erro);
 
     }
 
