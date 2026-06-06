@@ -1,6 +1,6 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbyDAqkTL_uIKH_yXdIw2nlTTbiGsCyW_WLrhfmc-Hh1YJuT203kdcOYdkgWOXHIYYjx6g/exec";
 let hashAtual = "";
-let ignorarProximaAtualizacao = false;
+let ultimaAlteracaoLocal = 0;
 
 let scrollSalvo = 0;
 let modulosAbertos = [];
@@ -272,7 +272,7 @@ async function atualizarAjuste(
 
     try {
 
-        ignorarProximaAtualizacao = true;
+        ultimaAlteracaoLocal = Date.now();
 
         await fetch(
             `${API_URL}?acao=ajuste` +
@@ -297,7 +297,7 @@ async function atualizarFinalizado(
 
     try {
 
-        ignorarProximaAtualizacao = true;
+        ultimaAlteracaoLocal = Date.now();
 
         await fetch(
             `${API_URL}?acao=finalizado` +
@@ -334,7 +334,7 @@ function salvarObservacao(
 
         try {
 
-            ignorarProximaAtualizacao = true;
+            ultimaAlteracaoLocal = Date.now();
 
             await fetch(
                 `${API_URL}?acao=observacao` +
@@ -362,6 +362,8 @@ function salvarObservacao(
 
 async function verificarAtualizacoes() {
 
+    console.log("Verificando atualizações...");
+
     try {
 
         const response = await fetch(API_URL);
@@ -375,10 +377,13 @@ async function verificarAtualizacoes() {
             novoHash !== hashAtual
         ) {
 
-            if (ignorarProximaAtualizacao) {
+            const agora = Date.now();
+
+            if (
+                agora - ultimaAlteracaoLocal < 5000
+            ) {
 
                 hashAtual = novoHash;
-                ignorarProximaAtualizacao = false;
                 return;
 
             }
@@ -386,6 +391,8 @@ async function verificarAtualizacoes() {
             document
                 .getElementById("toastAtualizacao")
                 .style.display = "flex";
+
+            hashAtual = novoHash;
 
         }
 
@@ -497,4 +504,4 @@ setInterval(() => {
 
     verificarAtualizacoes();
 
-}, 10000);
+}, 5000);
