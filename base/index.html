@@ -22,6 +22,18 @@
             </div>
             <img src="./img/logo_m.png" class="logo">
         </div>
+        <div id="toastAtualizacao" class="toast-atualizacao" style="display:none">
+
+            <span>
+                <i class="fa-solid fa-bell"></i>
+                Novas alterações encontradas
+            </span>
+
+            <button class="btn btn-sm btn-light" onclick="forcarAtualizacao()">
+                Atualizar
+            </button>
+
+        </div>
         <div class="row mb-4" id="dashboard">
 
             <div class="col-md-3 mb-3">
@@ -78,6 +90,7 @@
     <script>
 
         const API_URL = "https://script.google.com/macros/s/AKfycbwCtrpUYvsdyZpyCHfHFTcXpHBDylsmpOxTS3QO91_bbvzlH4-EZxRnO60r-RxTREq74A/exec";
+        let hashAtual = "";
 
         async function carregarDados() {
 
@@ -93,6 +106,7 @@
 
                 const response = await fetch(API_URL);
                 const registros = await response.json();
+                hashAtual = JSON.stringify(registros);
                 const totalItens = registros.length;
 
                 const totalFinalizados = registros.filter(
@@ -365,7 +379,57 @@
 
         }
 
+        async function verificarAtualizacoes() {
+
+            try {
+
+                const response = await fetch(API_URL);
+
+                const registros = await response.json();
+
+                const novoHash =
+                    JSON.stringify(registros);
+
+                if (
+                    hashAtual &&
+                    novoHash !== hashAtual
+                ) {
+
+                    document
+                        .getElementById(
+                            "toastAtualizacao"
+                        )
+                        .style.display = "flex";
+
+                }
+
+            } catch (erro) {
+
+                console.error(erro);
+
+            }
+
+        }
+
+        function forcarAtualizacao() {
+
+            document
+                .getElementById(
+                    "toastAtualizacao"
+                )
+                .style.display = "none";
+
+            carregarDados();
+
+        }
+
         carregarDados();
+
+        setInterval(() => {
+
+            verificarAtualizacoes();
+
+        }, 15000);
 
     </script>
 </body>
