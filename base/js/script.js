@@ -149,12 +149,15 @@ async function carregarDados() {
 
                    <textarea
                         class="campo-observacao"
-                        oninput="salvarObservacao(
-                            '${item.modulo}',
-                            '${item.id}',
-                            this.value,
-                            this
-                        )"
+                        oninput="
+                            ajustarAlturaTextarea(this);
+                            salvarObservacao(
+                                '${item.modulo}',
+                                '${item.id}',
+                                this.value,
+                                this
+                            );
+                        "
                     >${item.observacao || ''}</textarea>
 
                     </td>
@@ -249,6 +252,10 @@ async function carregarDados() {
         });
 
         restaurarEstadoTela();
+
+        document
+            .querySelectorAll(".campo-observacao")
+            .forEach(ajustarAlturaTextarea);
 
     } catch (erro) {
 
@@ -508,6 +515,13 @@ function restaurarEstadoTela() {
         });
 
     }, 100);
+
+}
+
+function ajustarAlturaTextarea(textarea) {
+
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + "px";
 
 }
 
