@@ -281,6 +281,11 @@ async function atualizarAjuste(
             `&valor=${valor}`
         );
 
+        const response = await fetch(API_URL);
+        const registros = await response.json();
+
+        hashAtual = JSON.stringify(registros);
+
     } catch (erro) {
 
         console.error(erro);
@@ -305,6 +310,11 @@ async function atualizarFinalizado(
             `&id=${encodeURIComponent(id)}` +
             `&valor=${valor}`
         );
+
+        const response = await fetch(API_URL);
+        const registros = await response.json();
+
+        hashAtual = JSON.stringify(registros);
 
     } catch (erro) {
 
@@ -343,7 +353,10 @@ function salvarObservacao(
                 `&observacao=${encodeURIComponent(observacao)}`
             );
 
-            // carregarDados();
+            const response = await fetch(API_URL);
+            const registros = await response.json();
+
+            hashAtual = JSON.stringify(registros);
 
             elemento.classList.remove("salvando");
             elemento.classList.add("salvo");
