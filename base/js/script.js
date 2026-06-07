@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbyDAqkTL_uIKH_yXdIw2nlTTbiGsCyW_WLrhfmc-Hh1YJuT203kdcOYdkgWOXHIYYjx6g/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwF7n0gHnppI1k7qKtIPEnu0M-6QoLkUFU0Y4Sdr57mitpgm5RrrOMyOGEEnWBzX6X1/exec";
 let hashAtual = "";
 let ultimaAlteracaoLocal = 0;
 
@@ -31,7 +31,9 @@ async function carregarDados() {
         const totalItens = itensValidos.length;
 
         const totalFinalizados = itensValidos.filter(
-            item => item.finalizado === true
+            item =>
+                item.finalizado === true &&
+                item.validacao === true
         ).length;
 
         const totalAjuste = itensValidos.filter(
@@ -118,6 +120,18 @@ async function carregarDados() {
 
                         <td>
                             <input
+                                class="form-check-input validacao"
+                                type="checkbox"
+                                ${item.validacao ? "checked" : ""}
+                                onchange="atualizarValidacao(
+                                    '${item.modulo}',
+                                    '${item.id}',
+                                    this.checked
+                                )">
+                        </td>
+
+                        <td>
+                            <input
                                 class="form-check-input finalizado"
                                 type="checkbox"
                                 ${item.finalizado ? "checked" : ""}
@@ -175,7 +189,8 @@ async function carregarDados() {
 
             const finalizadosModulo = dados[modulo].filter(
                 item => item.id !== "-" &&
-                    item.finalizado === true
+                    item.finalizado === true &&
+                    item.validacao === true
             ).length;
 
             const ajustesModulo = dados[modulo].filter(
@@ -228,6 +243,7 @@ async function carregarDados() {
                                     <th>ID</th>
                                     <th>Link</th>
                                     <th>Ajuste</th>
+                                    <th>Validação</th>
                                     <th>Finalizado</th>
                                     <th>Relatório</th>
                                     <th>Observações</th>
@@ -589,6 +605,45 @@ function refazerUltimaAcao() {
     if (ultimaAcaoComErro) {
 
         ultimaAcaoComErro();
+
+    }
+
+}
+
+async function atualizarValidacao(
+    modulo,
+    id,
+    valor
+) {
+
+    try {
+
+        ultimaAlteracaoLocal = Date.now();
+
+        await fetch(
+            `${API_URL}?acao=validacao` +
+            `&modulo=${encodeURIComponent(modulo)}` +
+            `&id=${encodeURIComponent(id)}` +
+            `&valor=${valor}`
+        );
+
+        const response = await fetch(API_URL);
+        const registros = await response.json();
+
+        hashAtual = JSON.stringify(registros);
+
+    } catch (erro) {
+
+        console.error(erro);
+
+        mostrarErro(
+            "Falha ao salvar validação",
+            () => atualizarValidacao(
+                modulo,
+                id,
+                valor
+            )
+        );
 
     }
 

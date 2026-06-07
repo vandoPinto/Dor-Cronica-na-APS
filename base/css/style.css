@@ -249,6 +249,7 @@ body {
         padding: 10px;
         resize: none;
         overflow: hidden;
+        text-align: left;
     }
 
     .btn-relatorio {
@@ -383,4 +384,10 @@ body {
         min-width: 900px;
     }
 
+}
+
+.table td,
+.table th {
+    text-align: center !important;
+    vertical-align: middle !important;
 }
