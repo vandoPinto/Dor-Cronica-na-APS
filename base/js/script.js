@@ -162,18 +162,18 @@ async function carregarDados() {
 
                       <td>
 
-                   <textarea
-                        class="campo-observacao"
-                        oninput="
-                            ajustarAlturaTextarea(this);
-                            salvarObservacao(
-                                '${item.modulo}',
-                                '${item.id}',
-                                this.value,
-                                this
-                            );
-                        "
-                    >${item.observacao || ''}</textarea>
+                  <textarea
+                    class="campo-observacao"
+                    oninput="
+                        ajustarAlturaTextareaDigitando(this);
+                        salvarObservacao(
+                            '${item.modulo}',
+                            '${item.id}',
+                            this.value,
+                            this
+                        );
+                    "
+                >${item.observacao || ''}</textarea>
 
                     </td>
 
@@ -576,6 +576,25 @@ function ajustarAlturaTextarea(textarea) {
 
     textarea.style.height = "auto";
     textarea.style.height = textarea.scrollHeight + "px";
+
+}
+
+function ajustarAlturaTextareaDigitando(textarea) {
+
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + "px";
+
+    const moduloConteudo =
+        textarea.closest(".modulo-conteudo");
+
+    if (
+        moduloConteudo &&
+        moduloConteudo.closest(".module-card")
+            .classList.contains("aberto")
+    ) {
+        moduloConteudo.style.maxHeight =
+            moduloConteudo.scrollHeight + "px";
+    }
 
 }
 
