@@ -76,9 +76,9 @@ items.push({
 items.push({
     'titulo': 'ASPECTOS EPIDEMIOLÓGICOS, DEMOGRÁFICOS E SOCIAIS RELACIONADOS ÀS FERIDAS NO SUS', 'nome': 'Aula 11', 'arquivo': '11.html', 'identificador': '10'
 });
-items.push({
-    'titulo': '', 'nome': 'Aula 12', 'arquivo': '12.html', 'identificador': '11'
-});
+// items.push({
+//     'titulo': '', 'nome': 'Aula 12', 'arquivo': '12.html', 'identificador': '11'
+// });
 
 
 
