@@ -1,0 +1,149 @@
+<div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
+    <div class="row g-0">
+        <div class="col-12">
+            <div style="height:20px; background:#cd5d1c; width:50%;"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
+        <div class="row align-items-start">
+            <div class="col-md-8"></div>
+            <div class="col-md-3 text-md-end text-center mt-4 mb-4">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;"
+                    alt="Logo de Manejo da dor crônica na aps">
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
+
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex justify-content-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula" style="color: var(--color-primary);">
+
+                    <div class="px-3 pt-4 text-start">
+
+                        <!-- TÍTULO CARD -->
+                        <p class="fw-bold mb-3" style="font-size:1.2rem;">
+                            Relação dos sistemas imunológico e endócrino com a dor crônica
+                        </p>
+
+                        <!-- IMAGEM -->
+                        <div class="mb-3">
+                            <img src="img/josimari.jpg" class="img-fluid" alt="">
+                        </div>
+
+                        <!-- AUTOR -->
+                        <p class="mb-0 small" style="font-size: .6rem !important;">
+                            <strong>Josimari Melo de Santana</strong><br>
+                            Fisioterapeura professora da Universidade
+                            Federal de Sergipe
+                        </p>
+
+                        <br><br>
+                    </div>
+
+                    <!-- BOTÃO PLAY -->
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- TEXTO -->
+            <div class="col-lg-6 mb-4">
+
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icons/icon_video.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">VIDEO</p>
+                </div>
+
+                <!-- TÍTULO (SEM underline e SEM highlight) -->
+                <h2 class="titulo-hq mb-3">
+                    Relação dos sistemas imunológico<br>
+                    e endócrino com a dor crônica
+                </h2>
+
+                <!-- TEXTO -->
+                <p>
+                    Após a leitura, é hora de consolidar os conhecimentos e ganhar clareza.</p>
+                <p>
+                    A Profa. Josimari, pós-doutora em Dor pela University of Iowa, revisita, neste
+                    vídeo, os conceitos apresentados na cartilha e os reorganiza de maneira didática,
+                    conectando fisiologia, inflamação e modulação da dor.
+                </p>
+                <p>Você consegue imaginar como explicaria essa interação sistêmica a um usuário?
+                </p>
+                <p><b>
+                        Lembre-se: transformar fisiologia em linguagem acessível é uma competência
+                        essencial para o manejo da dor crônica.
+                    </b></p>
+
+                <!-- COMPARTILHAR -->
+                <div class="d-flex align-items-center gap-3 mt-3 zoom"
+                    onclick="compartilharLink('https://www.youtube.com/embed/ImEL79sFqL8','Relação dos sistemas imunológico e endócrino com a dor crônica')"
+                    data-uw-rm-kbnav="click">
+                    <div style="width: 25px;">
+                        <img src="img/icons/icon_share.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Compartilhe este material.
+                    </p>
+                </div>
+                <!-- BOTÃO -->
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                        ASSISTA
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal3" tabindex="-1">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 4rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+
+                <iframe id="youtubeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/ImEL79sFqL8"
+                    title="Relação dos sistemas imunológico e endócrino com a dor crônica" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#videoModal3').on('hidden.bs.modal', function () {
+        let iframe = $('#youtubeVideo');
+        let src = iframe.attr('src');
+
+        iframe.attr('src', '');
+        iframe.attr('src', src);
+    });
+
+    // id="youtubeVideo"
+</script>

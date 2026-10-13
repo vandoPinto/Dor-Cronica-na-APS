@@ -1,0 +1,136 @@
+<div class="container-fluid px-0">
+
+    <!-- TOPO -->
+    <div class="row g-0">
+        <div class="col-12">
+            <div style="height:20px; background:#cd5d1c; width:50%;"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- LOGO DIREITA -->
+        <div class="row align-items-start">
+            <div class="col-md-8"></div>
+            <div class="col-md-3 text-md-end text-center mt-4 mb-4">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;"
+                    alt="Logo de Manejo da dor crônica na aps">
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
+
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula">
+
+                    <div style="padding:20px;">
+                        <img src="img/josimari.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="text-start px-3 pb-3">
+                        <p style="color: var(--color-primary);font-weight: 600;font-size: 1rem !important;">
+                            Desenvolvimento e<br>
+                            persistência da dor crônica
+                        </p>
+
+                        <p class="mb-0 small" style="color: var(--color-primary);font-size: .7rem !important;">
+                            <b>Josimari Melo de Santana</b><br>
+                            Fisioterapeura professora da
+                            Universidade Federal de Sergipe
+                        </p>
+                        <br>
+                        <br>
+                    </div>
+
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal4">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- TEXTO -->
+            <div class="col-lg-6  mb-4">
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icons/icon_audio.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">AUDIOCAST</p>
+                </div>
+
+                <h2 class="titulo-hq mb-3">
+                    Desenvolvimento e persistência da<br>
+                    dor crônica - o papel do Sistema<br>
+                    Nervoso Autônomo
+                </h2>
+
+                <p>
+                    Neste áudio, vamos ampliar a compreensão sobre como o sistema nervoso
+                    autônomo atua nas respostas ao estresse e na percepção de ameaça.
+                </p>
+
+                <p>Observe como essas respostas se articulam com aspectos emocionais e fisiológicos
+                    e podem contribuir para a compreensão da complexidade da dor crônica.</p>
+
+                <!-- COMPARTILHAR -->
+                <div class="d-flex align-items-center gap-3 mt-3 zoom"
+                    onclick="compartilharLink('https://www.youtube.com/embed/kqHkWUuoGCQ','Desenvolvimento e persistência da dor crônica - O papel do Sistema Nervoso Autônomo')"
+                    data-uw-rm-kbnav="click">
+                    <div style="width: 25px;">
+                        <img src="img/icons/icon_share.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Compartilhe este material.
+                    </p>
+                </div>
+
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal4">
+                        OUÇA AQUI
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal4" tabindex="-1">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 4rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+                <iframe id="youtubeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/kqHkWUuoGCQ"
+                    title="Desenvolvimento e persistência da dor crônica - O papel do Sistema Nervoso Autônomo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#videoModal4').on('hidden.bs.modal', function () {
+        let iframe = $('#youtubeVideo');
+        let src = iframe.attr('src');
+
+        iframe.attr('src', '');
+        iframe.attr('src', src);
+    });
+
+    // id="youtubeVideo"
+</script>
