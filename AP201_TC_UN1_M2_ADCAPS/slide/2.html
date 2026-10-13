@@ -1,0 +1,142 @@
+<div class="container-fluid px-0">
+
+    <!-- TOPO (mantido) -->
+    <div class="row g-0">
+        <div class="col-12">
+            <div style="height:20px; background:#cd5d1c; width:50%;"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- LOGO DIREITA (mantido) -->
+        <div class="row align-items-start">
+            <div class="col-md-8"></div>
+            <div class="col-md-3 text-md-end text-center mt-4 mb-4">
+                <img src="img/logo_m.png" class="logo-m" style="max-width:250px;"
+                    alt="Logo de Manejo da dor crônica na aps">
+            </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="row align-items-center">
+
+            <!-- CARD -->
+            <div
+                class="col-lg-4 offset-lg-1 d-flex flex-column align-items-center text-center mb-lg-0 mb-4 animate__animated animate__backInLeft">
+
+                <div class="card-aula">
+
+                    <div style="padding:20px;">
+                        <img src="img/animacao.jpg" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="text-start px-3 pb-3">
+                        <p class="fw-bold" style="color: var(--color-primary);">
+                            Como as pessoas experienciam a dor?
+                        </p>
+                        <br>
+                        <br>
+                    </div>
+
+                    <button class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="play-circle" cx="32" cy="32" r="28" fill="#0d47ff" />
+                            <path class="play-icon" d="M26 20L44 32L26 44Z" fill="white" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- TEXTO -->
+            <div class="col-lg-6  mb-4">
+
+                <!-- TIPO -->
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 50px;">
+                        <img src="img/icons/icon_animacao.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0 fw-bold">ANIMAÇÃO</p>
+                </div>
+
+                <!-- TÍTULO -->
+                <h2 class="titulo-hq mb-3">
+                    Como as pessoas experienciam a dor?
+                </h2>
+
+                <!-- TEXTO -->
+                <p>
+                    Para compreender a dor crônica a partir da neurociência, é fundamental revisitar
+                    alguns conceitos básicos de neuroanatomia e neurofisiologia. Esta animação foi
+                    desenvolvida justamente com o objetivo de trazer clareza aos principais
+                    mecanismos envolvidos na experiência dolorosa.
+
+                </p>
+
+                <p>Igualmente ajuda a compreender como a modulação da dor ocorre e como
+                    múltiplos sistemas interagem na configuração dessa experiência.
+                </p>
+                <p>
+                    Ao ilustrar esses fundamentos neuroanatômicos e neurofisiológicos, a animação
+                    facilita a compreensão dos conceitos que serão explorados na cartilha a seguir.
+                </p>
+
+                <!-- COMPARTILHAR -->
+                <div class="d-flex align-items-center gap-3 mt-3 zoom" onclick="compartilharLink(
+                        'https://www.youtube.com/embed/gwKKJLpthTQ',
+                        'Técnicas de Comunicação Empática: Fortalecendo a relação com a pessoa com dor crônica na APS'
+                        )" data-uw-rm-kbnav="click">
+                    <div style="width: 25px;">
+                        <img src="img/icons/icon_share.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="mb-0" style="color: var(--color-primary);">
+                        Compartilhe este material.
+                    </p>
+                </div>
+
+                <!-- BOTÃO -->
+                <div class="centro-mobile">
+                    <button class="btn-hq mt-3 zoom" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                        ASSISTA
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal2" tabindex="-1">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+        style="position: absolute; top: 1rem; right: 4rem;"></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- BODY -->
+            <div class="modal-body p-0" style="height:80vh;">
+
+                <iframe id="youtubeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/gwKKJLpthTQ"
+                    title="Técnicas de Comunicação Empática: Fortalecendo a relação com a pessoa com dor crônica na APS"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#videoModal2').on('hidden.bs.modal', function () {
+        let iframe = $('#youtubeVideo');
+        let src = iframe.attr('src');
+
+        iframe.attr('src', '');
+        iframe.attr('src', src);
+    });
+
+    // id="youtubeVideo"
+</script>
